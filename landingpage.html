@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>John Paul's Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+      font-family: Tahoma, Verdana, sans-serif;
+      color: #3F3B33;
+    }
+
+    .container {
+      max-width: 1450px;
+      margin: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background-color: #FFFDF6;
+      padding: 40px 50px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .hero img {
+      width: 380px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      order: 2;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .hero-content {
+      flex: 1;
+      text-align: left;
+      order: 1;
+    }
+
+    h1 {
+      color: #5A4E3C;
+      margin: 0;
+      letter-spacing: 1px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #6B5E48;
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: #6B5E48;
+      line-height: 1.8;
+      margin: 20px 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #6B5E48;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 24px;
+    }
+
+    /* Content Sections */
+    .section {
+      background-color: #FFFDF6;
+      padding: 50px 0;
+      margin-bottom: 0;
+      border-radius: 0;
+      box-shadow: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #CBBE9A;
+    }
+
+    .section-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+      padding: 0 60px;
+      max-width: 1450px;
+      margin: 0 auto;
+    }
+
+    .section-image {
+      text-align: center;
+    }
+
+    .section-image img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .section-text h3 {
+      color: #5A4E3C;
+      font-size: 22px;
+      margin-top: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .section-text p {
+      color: #6B5E48;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #5A4E3C;
+      color: #FFFDF6;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease;
+      font-family: Tahoma, Verdana, sans-serif;
+    }
+
+    .btn:hover {
+      background-color: #6B5E48;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #CBBE9A, transparent);
+      margin: 30px 0;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #FFFDF6;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      z-index: 1000;
+      min-width: 180px;
+    }
+
+    /* Hero navigation bar (above the name) */
+    .hero-nav {
+      display: inline-flex;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #FFFDF6;
+      padding: 8px 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border: 1px solid #E8DCC8;
+      position: absolute;
+      top: 12px;
+      right: 1100px;
+      z-index: 1200;
+    }
+
+    .hero-nav a,
+    .hero-nav .dropbtn {
+      text-decoration: none;
+      color: #5A4E3C;
+      background: transparent;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background-color 0.18s ease, transform 0.12s ease, color 0.18s ease;
+      display: inline-block;
+    }
+
+    .hero-nav a:hover,
+    .hero-nav .dropbtn:hover {
+      background-color: #F0E8D8;
+      color: #3F3B33;
+      transform: translateY(-2px);
+    }
+
+    /* Dropdown for Blogs */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background-color: #FFFDF6;
+      min-width: 140px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      padding: 6px 6px;
+      z-index: 1100;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 8px 12px;
+      color: #5A4E3C;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #F0E8D8;
+      color: #3F3B33;
+      transform: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-nav {
+        position: static;
+        justify-content: center;
+        margin: 12px auto 12px auto;
+        width: calc(100% - 40px);
+        display: flex;
+      }
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+      }
+      .dropdown.open .dropdown-content {
+        display: block;
+      }
+    }
+
+    .navbar h3 {
+      margin: 0 0 15px 0;
+      color: #5A4E3C;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .navbar-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-links li {
+      margin: 10px 0;
+    }
+
+    .navbar-links a {
+      color: #6B5E48;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+      background-color: #F0E8D8;
+      color: #5A4E3C;
+      transform: translateX(5px);
+    }
+
+    .back-btn {
+      background-color: #5A4E3C;
+      color: #FFFDF6;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+      width: 100%;
+      border-top: 1px solid #E8DCC8;
+      padding-top: 15px;
+      transition: background-color 0.3s ease;
+      margin-left: -12px;
+      margin-right: -12px;
+      padding-left: 26px;
+      padding-right: 26px;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      background-color: #6B5E48;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 60px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #7A6F5A;
+      background-color: #FFFDF6;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Alternate layout for even sections */
+    .section:nth-child(even) .section-content {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+      .section-content {
+        grid-template-columns: 1fr;
+      }
+
+      .section:nth-child(even) .section-content {
+        direction: ltr;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .hero img {
+        width: 300px;
+        height: 300px;
+        order: 1;
+      }
+
+      .hero-content {
+        text-align: center;
+        order: 2;
+      }
+
+      .hero-content h1 {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 30px 20px;
+      }
+
+      footer {
+        padding: 30px 20px;
+      }
+
+      .section-image img {
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="IMAGES/LANDINGPAGE IMAGE.jpg" alt="John Paul Portfolio Hero">
+      <div class="hero-content">
+        <nav class="hero-nav" aria-label="Primary">
+          <a href="landingpage.html">Home</a>
+          <a href="BIOGRAPHY.html">Biography</a>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">Blogs ▾</a>
+            <div class="dropdown-content" aria-label="Blog links">
+              <a href="BLOG1.html">Blog 1</a>
+              <a href="BLOG2.html">Blog 2</a>
+              <a href="BLOG3.html">Blog 3</a>
+            </div>
+          </div>
+        </nav>
+        <h1>Hi, I'm John Paul C. Jhamboy</h1>
+        <div class="subtitle">A Information Technology Student</div>
+      </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="section">
+      <div class="section-text" style="text-align: center;">
+        <p class="intro">
+          Welcome to my portfolio! Explore my biography, blog stories, and various projects. 
+          Click on any section below to learn more about my journey as an IT student.
+        </p>
+      </div>
+    </div>
+
+    <!-- Biology Section -->
+    <div class="section">
+      <div class="section-content">
+        <div class="section-image">
+          <img src="IMAGES/JOHNPAUL1.jpg" alt="Biography">
+        </div>
+        <div class="section-text">
+          <h2>📖 Biography</h2>
+          <p>Get to know more about my background, childhood, teenage years, and college journey. 
+          Discover the experiences that shaped who I am today.</p>
+          <p>Learn about the pivotal moments in my life and how they've influenced my path as an IT student. 
+          From my humble beginnings to my current academic pursuits, every chapter tells a unique story.</p>
+          <a href="BIOGRAPHY.html" class="btn">View Full Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Story 1 Section -->
+    <div class="section">
+      <div class="section-content">
+        <div class="section-text">
+          <h2>📝 Blog Story Part 1</h2>
+          <p>Read about my journey as an IT student, the challenges I faced, and what keeps me 
+          motivated through my academic career.</p>
+          <p>In this first blog entry, I dive deep into my experiences during my initial years in 
+          the IT program. Discover the hurdles I've overcome and the passion that drives me forward.</p>
+          <a href="BLOG1.html" class="btn">Read Blog 1</a>
+        </div>
+        <div class="section-image">
+          <img src="IMAGES/JOHNPAUL2.jpg" alt="Blog Story 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Story 2 Section -->
+    <div class="section">
+      <div class="section-content">
+        <div class="section-image">
+          <img src="IMAGES/JOHNPAUL3.jpg" alt="Blog Story 2">
+        </div>
+        <div class="section-text">
+          <h2>📝 Blog Story Part 2</h2>
+          <p>Explore the latest chapter of my blog where I share more insights and experiences 
+          from my second year in college.</p>
+          <p>As I progress through my studies, new challenges and opportunities emerge. This blog 
+          entry captures the growth I've experienced and the lessons I've learned along the way.</p>
+          <a href="BLOG2.html" class="btn">Read Blog 2</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Story 3 Section -->
+    <div class="section">
+      <div class="section-content">
+        <div class="section-text">
+          <h2>📝 Blog Story Part 3</h2>
+          <p>Dive into the third part of my blog series where I continue sharing my experiences 
+          and lessons learned as an IT student.</p>
+          <p>In this final installment, I reflect on my journey so far and share insights about 
+          future endeavors. Join me as I explore what lies ahead in my academic and professional career.</p>
+          <a href="BLOG3.html" class="btn">Read Blog 3</a>
+        </div>
+        <div class="section-image">
+          <img src="IMAGES/JOHNPAUL4.jpg" alt="Blog Story 3">
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 • John Paul's Portfolio
+    </footer>
+
+  </div>
+</body>
+</html>
