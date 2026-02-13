@@ -19,19 +19,10 @@
             margin: auto;
             background-color: #FFFDF6;
             padding: 50px 40px;
+            text-align: center;
             border-radius: 16px;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
         }
-
-    .container {
-      max-width: 1450px;
-      margin: auto;
-      background-color: #FFFDF6;
-      padding: 50px 40px;
-      text-align: center;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    }
 
         h1::after {
             content: "";
@@ -43,14 +34,6 @@
             border-radius: 2px;
         }
 
-        h2 {
-            text-align: center;
-            margin-top: 50px;
-            color: #6B5E48;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         .section {
             background-color: #F4EEDB;
             padding: 30px 35px;
@@ -58,6 +41,10 @@
             border-radius: 12px;
             border: 1px solid #DDD2B8;
             transition: transform 0.3s ease;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            text-align: left;
         }
 
         .section:hover {
@@ -94,95 +81,181 @@
             background-color: #6B5E48;
         }
 
-        .back-button-container {
+        .back-wrapper {
             text-align: center;
             margin-top: 40px;
         }
 
+        .img-container {
+            width: 200px;
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            border: 1px solid #DDD2B8;
+            background: #FFFDF6;
+            padding: 4px;
+            overflow: hidden;
+            flex: 0 0 200px;
+        }
+
+        .bio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
+        }
+
+        .section-text {
+            flex: 1;
+        }
+        .blog-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .blog-navigation a {
+            padding: 12px 25px;
+            background-color: #5A4E3C;
+            color: #FFFDF6;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-navigation a:hover {
+            background-color: #6B5E48;
+        }
+
+
         footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 25px;
             font-size: 14px;
             color: #7A6F5A;
         }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .img-container {
+                width: 100%;
+            }
+        
+        }
     </style>
 </head>
+
 <body>
+
     <div class="container">
         <h1>A Typical Life of an IT Student</h1>
 
+        <!-- Section 1 -->
         <div class="section">
-            <p>
-                <strong>Have you ever wondered what it's like to be an IT student behind the screens?</strong>
-                <em>Good day!</em> I am <strong>John Paul Jhamboy</strong>, a simple <em>BSIT student</em> who
-                didn't see myself in this kind of field or program ever before, because I am a student who is
-                always <strong>hesitant when it comes to making certain decisions</strong> about myself, especially
-                in selecting my program which I'm passionate about. That is why I fell into the
-                <strong>BSIT program as not my first choice</strong>. But the <em>dedication and resilience</em>
-                that arose within me is what inspired me to <strong>keep pursuing what I had begun</strong>.
-            </p>
+            <div class="img-container">
+                <img src="IMAGES/BLOG1IMAGE1.jpeg" alt="Blog image 1" class="bio-img">
+            </div>
+            <div class="section-text">
+                <p>
+                    <strong>Have you ever wondered what it's like to be an IT student behind the screens?</strong>
+                    <em>Good day!</em> I am <strong>John Paul Jhamboy</strong>, a simple <em>BSIT student</em> who
+                    didn't see myself in this kind of field or program ever before, because I am a student who is
+                    always <strong>hesitant when it comes to making certain decisions</strong> about myself, especially
+                    in selecting my program which I'm passionate about. That is why I fell into the
+                    <strong>BSIT program as not my first choice</strong>. But the <em>dedication and resilience</em>
+                    that arose within me is what inspired me to <strong>keep pursuing what I had begun</strong>.
+                </p>
+            </div>
         </div>
 
         <div class="divider"></div>
 
+        <!-- Section 2 -->
         <div class="section">
-            <p>
-                <strong>First year in college</strong> gave me goosebumps and <em>unexplainable emotions</em>
-                because when I was in high school, <strong>college is what I feared the most</strong> due to the
-                high-level way of teaching. <em>Socializing with new and mature classmates</em> caused me
-                difficulties in building friendships. The <strong>another level of lessons</strong> pushed me
-                to think critically because of various processes and logic. <strong>Being an IT student is far
-                from easy</strong>; every day introduces a different kind of challenge. I experienced
-                <em>heavy workloads</em> such as assignments, projects, and laboratory tasks that left me unsure
-                where to begin. There was a time during my <strong>second year, first semester</strong> when I
-                doubted myself and thought I couldn't handle this program. I even questioned if I should
-                <em>shift to another course</em>, especially when dealing with <strong>programming logic and
-                algorithms</strong>, particularly in <strong>Java</strong>. Despite these hardships, it opened
-                opportunities for me to <em>learn, adapt, and grow</em>, developing my
-                <strong>problem-solving, patience, and time management skills</strong>—not only for school,
-                but also for real life.
-            </p>
+            <div class="img-container">
+                <img src="IMAGES/BLOG1IMAGE2.jpeg" alt="Blog image 2" class="bio-img">
+            </div>
+            <div class="section-text">
+                <p>
+                    <strong>First year in college</strong> gave me goosebumps and <em>unexplainable emotions</em>
+                    because when I was in high school, <strong>college is what I feared the most</strong> due to the
+                    high-level way of teaching. <em>Socializing with new and mature classmates</em> caused me
+                    difficulties in building friendships. The <strong>another level of lessons</strong> pushed me
+                    to think critically because of various processes and logic. <strong>Being an IT student is far
+                    from easy</strong>; every day introduces a different kind of challenge. I experienced
+                    <em>heavy workloads</em> such as assignments, projects, and laboratory tasks that left me unsure
+                    where to begin. There was a time during my <strong>second year, first semester</strong> when I
+                    doubted myself and thought I couldn't handle this program. I even questioned if I should
+                    <em>shift to another course</em>, especially when dealing with <strong>programming logic and
+                    algorithms</strong>, particularly in <strong>Java</strong>. Despite these hardships, it opened
+                    opportunities for me to <em>learn, adapt, and grow</em>, developing my
+                    <strong>problem-solving, patience, and time management skills</strong>—not only for school,
+                    but also for real life.
+                </p>
+            </div>
         </div>
 
+        <!-- Section 3 -->
         <div class="section">
-            <p>
-                <strong>What keeps me motivated</strong> through this demanding journey is the
-                <em>joy of creating something purposeful</em>. I feel happy when the <strong>programs and codes</strong>
-                I worked hard on finally run <em>smoothly and correctly</em>. These moments make me forget
-                the <strong>late nights and tough struggles</strong>. Beyond coding, I believe that
-                <em>technology is a powerful tool</em> capable of changing lives and industries. Knowing that
-                the <strong>skills I develop every day</strong> can solve future problems keeps my
-                <em>passion burning</em>. Learning from my professors and their <strong>innovative ideas</strong>
-                also motivates me to <em>expand my boundaries</em> and grow as a person.
-            </p>
+            <div class="img-container">
+                <img src="IMAGES/BLOG1IMAGE3.jpeg" alt="Blog image 3" class="bio-img">
+            </div>
+            <div class="section-text">
+                <p>
+                    <strong>What keeps me motivated</strong> through this demanding journey is the
+                    <em>joy of creating something purposeful</em>. I feel happy when the <strong>programs and codes</strong>
+                    I worked hard on finally run <em>smoothly and correctly</em>. These moments make me forget
+                    the <strong>late nights and tough struggles</strong>. Beyond coding, I believe that
+                    <em>technology is a powerful tool</em> capable of changing lives and industries. Knowing that
+                    the <strong>skills I develop every day</strong> can solve future problems keeps my
+                    <em>passion burning</em>. Learning from my professors and their <strong>innovative ideas</strong>
+                    also motivates me to <em>expand my boundaries</em> and grow as a person.
+                </p>
+            </div>
         </div>
 
         <div class="divider"></div>
 
+        <!-- Section 4 -->
         <div class="section">
-            <p>
-                Now that I am currently in my <strong>second year</strong>, I realized that
-                <em>success in this career does not come easily</em>. It requires
-                <strong>dedication, determination, constant practice</strong>, and the willingness to
-                <em>learn from mistakes</em>. There are moments of frustration when codes fail and projects
-                become overwhelming, but these struggles taught me
-                <strong>resilience and perseverance</strong>. Every struggle becomes an
-                <em>opportunity to improve and gain confidence</em>. My advice to students who plan to take
-                the <strong>BSIT program</strong> is to <em>trust their decisions</em> and choose what they are
-                truly <strong>interested and passionate about</strong>.
-            </p>
+            <div class="img-container">
+                <img src="IMAGES/BLOG1IMAGE4.jpeg" alt="Blog image 4" class="bio-img">
+            </div>
+            <div class="section-text">
+                <p>
+                    Now that I am currently in my <strong>second year</strong>, I realized that
+                    <em>success in this career does not come easily</em>. It requires
+                    <strong>dedication, determination, constant practice</strong>, and the willingness to
+                    <em>learn from mistakes</em>. There are moments of frustration when codes fail and projects
+                    become overwhelming, but these struggles taught me
+                    <strong>resilience and perseverance</strong>. Every struggle becomes an
+                    <em>opportunity to improve and gain confidence</em>. My advice to students who plan to take
+                    the <strong>BSIT program</strong> is to <em>trust their decisions</em> and choose what they are
+                    truly <strong>interested and passionate about</strong>.
+                </p>
+            </div>
         </div>
 
-        <div class="back-button-container">
-            <a href="index.html" class="btn">← Back to Portfolio</a>
-        </div>
-
-        <footer>
-            © 2026 • Blog Story Part 1 • John Paul
-        </footer>
     </div>
-</body>
+
+    <div class="back-wrapper">
+        <a href="index.html" class="btn">← Back to Portfolio</a>
+    </div>
+
+    <div class="blog-navigation">
+        <a href="index.html">← Back</a>
+        <a href="BLOG2.html">Next →</a>
+    </div>  
     
+    <footer>
+        © 2026 • Blog Story Part 1 • John Paul
+    </footer>
+
 </body>
 
 </html>

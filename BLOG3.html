@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Paul's Blog Story Part 3</title>
+
     <style>
         body {
             margin: 0;
@@ -21,17 +22,8 @@
             padding: 50px 60px;
             border-radius: 16px;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-
-    .container {
-      max-width: 1450px;
-      margin: auto;
-      background-color: #FFFDF6;
-      padding: 50px 60px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
 
         h1::after {
             content: "";
@@ -43,14 +35,6 @@
             border-radius: 2px;
         }
 
-        h2 {
-            text-align: center;
-            margin-top: 50px;
-            color: #6B5E48;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         .section {
             background-color: #F4EEDB;
             padding: 30px 35px;
@@ -58,10 +42,26 @@
             border-radius: 12px;
             border: 1px solid #DDD2B8;
             transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            text-align: left;
         }
 
         .section:hover {
             transform: translateY(-3px);
+        }
+
+        .section img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #DDD2B8;
+        }
+
+        .section-content {
+            flex: 1;
         }
 
         p {
@@ -91,7 +91,6 @@
             font-weight: bold;
             letter-spacing: 0.5px;
             transition: background-color 0.3s ease;
-            font-family: Tahoma, Verdana, sans-serif;
         }
 
         .btn:hover {
@@ -104,107 +103,148 @@
             margin-bottom: 30px;
         }
 
+        .blog-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .blog-navigation a {
+            padding: 12px 25px;
+            background-color: #5A4E3C;
+            color: #FFFDF6;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-navigation a:hover {
+            background-color: #6B5E48;
+        }
+
         footer {
             text-align: center;
             margin-top: 50px;
             font-size: 14px;
             color: #7A6F5A;
         }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section img {
+                width: 100%;
+                height: auto;
+            }
+
+            p {
+                text-indent: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>A VISION BEYOND GRADUATION: MY FUTURE IN IT</h1>
 
+        <!-- Section 1 -->
         <div class="section">
-            <p>
-                I used to think of <strong>graduation as the finish line</strong> of my journey.
-                With a bit of reflection, I find graduation to be an even more important milestone,
-                as it marks <em>the beginning of an entirely new journey in life</em>. Bilang isang
-                IT student, I often ask myself a simple but important question: <strong>"What kind
-                of IT career do I want to be after graduation?"</strong> It has to be more than
-                securing a job. It has to be a career where I can <em>grow and solve real, meaningful
-                problems</em>. This blog captures my vision post-graduation, my aspirations, and 
-                <strong>the future that I aim to achieve in the IT industry</strong>.
-            </p>
+            <img src="IMAGES/BLOG3IMAGE1.jpeg" alt="Blog Image 1">
+            <div class="section-content">
+                <p>
+                    I used to think of <strong>graduation as the finish line</strong> of my journey.
+                    With a bit of reflection, I find graduation to be an even more important milestone,
+                    as it marks <em>the beginning of an entirely new journey in life</em>. Bilang isang
+                    IT student, I often ask myself a simple but important question: <strong>"What kind
+                    of IT career do I want to be after graduation?"</strong> It has to be more than
+                    securing a job. It has to be a career where I can <em>grow and solve real, meaningful
+                    problems</em>. This blog captures my vision post-graduation, my aspirations, and 
+                    <strong>the future that I aim to achieve in the IT industry</strong>.
+                </p>
+            </div>
         </div>
 
         <div class="divider"></div>
 
-    <div class="section">
-      <p>
-        I used to think of <strong>graduation as the finish line</strong> of my journey,
-        with a bit of reflection, I find graduation to be an even more important milestone,
-        as it marks <em>the beginning of an entirely new journey in life</em>. Bilang isang
-        IT student, I often ask myself a simple but important question, <strong>"What kind
-          of IT career do I want to be after graduation?”</strong> It has to be more than
-        securing a job. It has to be a career where I can <em>grow and solve real, meaningful
-          problems</em>. This blog captures my vision post grad, my aspirations, and <strong>
-          the future that I aim to achieve in the IT industry</strong>.
-      </p>
+        <!-- Section 2 -->
+        <div class="section">
+            <img src="IMAGES/BLOG3IMAGE2.jpeg" alt="Blog Image 2">
+            <div class="section-content">
+                <p>
+                    I chose the pathway towards IT because I was <strong>curious about what happens in
+                    technology beyond what is visible on screens</strong>. When I was in college, I
+                    found out that IT is more than just writing code or doing computer repair; it is
+                    actually dealing with <em>real-world problems</em> by means of <strong>logic,
+                    creativity, and patience</strong>. After years, I can see myself working in a
+                    specific company bilang isang <strong>Cybersecurity professional</strong>, since
+                    nowadays, <em>data and systems are more valuable than ever</em> as hackers or
+                    attackers are prevalent and cause threats and system breaches. I chose this
+                    career to <strong>protect privacy, infrastructures, systems, and networks</strong>
+                    mula sa mga taong nagnanais na i-exploit ang mga ito. I know that choosing this
+                    path will give me hardships, but <em>persistence is needed in this field</em>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <img src="IMAGES/BLOG3IMAGE3.jpeg" alt="Blog Image 3">
+            <div class="section-content">
+                <p>
+                    My perspective has been <em>gently shifting from student to future professional
+                    Cybersecurity</em> habang papalapit ang graduation. I am aware that <strong>
+                    mistakes and failures are a significant part of learning</strong>. Now, I am
+                    concentrating on strengthening my <strong>technical and communication skills
+                    </strong> dahil sa field na ito, ay hindi lang technical skills ang mahalaga
+                    but also the <em>ability to communicate, collaborate, and build relationships</em>
+                    inside the company na tutulong sakin to have good output results and smoother
+                    workflow along with my colleagues. I want to work with a company where I can
+                    <strong>gain real-world experience</strong> and <em>prove my worth as a trustworthy
+                    Cybersecurity professional</em> na siguradong hahawak ng malaking responsibilidad.
+                </p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <img src="IMAGES/BLOG3IMAGE4.jpeg" alt="Blog Image 4">
+            <div class="section-content">
+                <p>
+                    As I look beyond graduation, aware ako na sa IT field ay kailangan ng <strong>dedication,
+                    effort, and patience</strong>. Handa akong <em>mag-commit</em> kahit alam kong hindi
+                    magiging madali ang kakaharapin ko sa field na ito. The most important lesson I learned
+                    is that <strong>having a precise goal helps me stay focused</strong> throughout my college
+                    journey, especially during challenging periods. I advise other students who share the same
+                    situation na <em>wag magdoubt sa kanilang tinatahak</em> at piliin kung ano talaga ang gusto
+                    nilang career before graduation to avoid career crisis. I view graduation as <strong>my
+                    starting point in pursuing a long-term IT career</strong> that will continue until the
+                    time that I choose to step away from it.
+                </p>
+            </div>
+        </div>
+
+        <div class="back-button-container">
+            <a href="index.html" class="btn">← Back to Portfolio</a>
+        </div>
+
+      <div class="blog-navigation">
+        <a href="BLOG2.html">← Previous</a>
+        <a href="index.html">Go to Home Page →</a>
+      </div>
+
+        <footer>
+            © 2026 • Blog Story Part 3 • John Paul
+        </footer>
+
     </div>
-
-    <div class="divider"></div>
-
-
-
-    <div class="section">
-      <p>
-        I chose the pathway towards IT because I was <strong>curious about what happens in
-          technology beyond what is visible on screens</strong>. When I was in college, I
-        found out that IT is more than just writing code or doing computer repair; it is
-        actually dealing with <em>real-world problems</em> by means of <strong>logic,
-          creativity, and patience</strong>. After years, I can see myself working in a
-        specific company bilang isang <strong>Cybersecurity professional</strong>, since
-        nowadays, <em>data and systems are more valuable than ever</em> as hackers or
-        attackers are prevalent and cause threats and system breaches. I chose this
-        career to <strong>protect privacy, infrastructures, systems, and networks</strong>
-        mula sa mga taong nagnanais na i-exploit ang mga ito. I know that choosing this
-        path will give me hardships, but <em>persistence is needed in this field</em>.
-      </p>
-    </div>
-
-    <div class="section">
-      <p>
-        My perspective has been <em>gently shifting from student to future professional
-          Cybersecurity</em> habang papalapit ang graduation. I am aware that <strong>
-          mistakes and failures are a significant part of learning</strong>. Now, I am
-        concentrating on strengthening my <strong>technical and communication skills
-        </strong> dahil sa field na ito, ay hindi lang technical skills ang mahalaga
-        but also the <em>ability to communicate, collaborate, and build relationships</em>
-        inside the company na tutulong sakin to have good output results and smoother
-        workflow along with my colleagues. I want to work with a company where I can
-        <strong>gain real-world experience</strong> and <em>prove my worth as a trustworthy
-          Cybersecurity professional</em> na siguradong hahawak ng malaking responsibilidad.
-      </p>
-    </div>
-
-    <div class="divider"></div>
-
-
-    <div class="section">
-      <p>
-        As I look beyond graduation, aware ako na sa IT field ay kailangan ng <strong>dedication,
-          effort, and patience</strong>. Handa akong <em>mag-commit</em> kahit alam kong hindi
-        magiging madali ang kakaharapin ko sa field na ito. The most important lesson I learned
-        is that <strong>having a precise goal helps me stay focused</strong> throughout my college
-        journey, especially during challenging periods. I advise other students who share the same
-        situation na <em>wag magdoubt sa kanilang tinatahak</em> at piliin kung ano talaga ang gusto
-        nilang career before graduation to avoid career crisis. I view graduation as <strong>my
-          starting point in pursuing a long-term IT career</strong> that will continue until the
-        time that I choose to step away from it.
-      </p>
-    </div>
-
-    <div class="back-button-container">
-      <a href="index.html" class="btn">← Back to Portfolio</a>
-    </div>
-
-    <footer>
-      © 2026 • Blog Story Part 3 • John Paul
-    </footer>
-
-  </div>
 </body>
-
 </html>
