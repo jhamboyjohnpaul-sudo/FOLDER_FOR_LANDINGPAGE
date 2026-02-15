@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - John Paul</title>
+    <style>
+        /* --- Variables --- */
+        :root {
+            --beige-100: #FFFDF6;
+            --beige-200: #FFF6EE;
+            --accent: #5A4E3C;
+            --muted: #6B5E48;
+            --text-main: #3F3B33;
+            --card-bg: #F7F3EB;
+            --border-color: #EFE7D3;
+            --shadow-subtle: rgba(0, 0, 0, 0.08);
+            --shadow-hover: rgba(0, 0, 0, 0.18);
+        }
+
+        /* --- Base Styles --- */
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+            font-family: Tahoma, Verdana, sans-serif;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        /* --- Layout --- */
+        .container {
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--beige-100);
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px var(--shadow-subtle);
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: var(--accent);
+            text-align: center;
+            margin: 0 0 20px 0;
+            letter-spacing: 1px;
+            font-size: 2.5rem;
+        }
+
+        .intro {
+            color: var(--muted);
+            text-align: center;
+            margin: 0 0 30px 0;
+            font-size: 15px;
+        }
+
+        /* --- Category Sections --- */
+        .section {
+            margin-top: 40px;
+        }
+
+        .category-title {
+            color: var(--accent);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 999px;
+            background: linear-gradient(180deg, #FFF8EE, #F6EEE0);
+            border: 1px solid #E7DCC4;
+            box-shadow: 0 6px 18px rgba(90, 78, 60, 0.06);
+        }
+
+        .category-subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 8px 0 20px;
+            padding-left: 4px;
+        }
+
+        /* --- Photo Grid --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px; 
+            align-items: stretch;
+        }
+
+        /* --- Photo Card --- */
+        .photo-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            position: relative;
+            transition: border-color 0.18s ease, transform 0.18s ease;
+            aspect-ratio: 1 / 1;
+            padding: 8px;               /* inner padded frame */
+            box-sizing: border-box;     /* keep tile size unchanged */
+        }
+
+        .photo-card a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .photo-card img {
+            border-radius: 6px;        /* inner image rounded corner */
+            background: #fff;          /* subtle paper background for contrast */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+        }
+
+        .photo-card:hover {
+            border-color: #D1C3A9;
+            transform: translateY(-2px);
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px var(--shadow-hover);
+            filter: brightness(1.02);
+        }
+
+        /* Accessibility & Focus */
+        .photo-card a:focus img,
+        .photo-card a:focus-visible img {
+            transform: scale(1.03);
+            outline: 3px solid rgba(90, 78, 60, 0.1);
+        }
+
+        .photo-card a:active img {
+            transform: scale(0.98);
+        }
+
+        /* --- Buttons --- */
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--accent);
+            color: var(--beige-100);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover {
+            background: var(--muted);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        footer {
+            color: #7A6F5A;
+            text-align: center;
+            margin-top: 48px;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Photo Dump</h1>
+            <p class="intro">A simple meaningful photo dump. Click any image to view it in full size.</p>
+        </header>
+
+        <section class="section">
+            <div class="category-title">My Self</div>
+            <p class="category-subtitle">Personal portraits of me from kids to collge.</p>
+            <div class="grid">
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP1.jpg" title="A precious throwback with my Father."><img src="IMAGES/MYSELFDUMP1.jpg" alt="My Self 1"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP2.jpg" title="Little me in my favorite red shirt."><img src="IMAGES/MYSELFDUMP2.jpg" alt="My Self 2"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP3.jpg" title="A Grade 1 Moving up."><img src="IMAGES/MYSELFDUMP3.jpg" alt="My Self 3"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP4.jpg" title="Casual days and mirror captures."><img src="IMAGES/MYSELFDUMP4.jpg" alt="My Self 4"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP5.jpg" title="Escape Hike at DRT Bulacan."><img src="IMAGES/MYSELFDUMP5.jpg" alt="My Self 5"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP6.jpg" title="Dressed up and ready for the big world."><img src="IMAGES/MYSELFDUMP6.jpg" alt="My Self 6"></a></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="category-title">Travel</div>
+            <p class="category-subtitle">Scenic captures and travel memories from around the places I've visited.</p>
+            <div class="grid">
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP1.jpg" title="Wet ride at Dinadiawan Aurora."><img src="IMAGES/TRAVELDUMP1.jpg" alt="Travel 1"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP2.jpg" title="Huge Balete tree at Baler Aurora."><img src="IMAGES/TRAVELDUMP2.jpg" alt="Travel 2"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP3.jpg" title="Exploring the vibrant landmarks of Dingalan."><img src="IMAGES/TRAVELDUMP3.jpg" alt="Travel 3"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP4.jpg" title="Solo rides at Gabaldon Nueva Ecija."><img src="IMAGES/TRAVELDUMP4.jpg" alt="Travel 4"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP5.jpg" title="Facing the Mother Mayon volcano."><img src="IMAGES/TRAVELDUMP5.jpg" alt="Travel 5"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP6.jpg" title="Night rides at Alabang Town Center."><img src="IMAGES/TRAVELDUMP6.jpg" alt="Travel 6"></a></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="category-title">My Girlfriend</div>
+            <p class="category-subtitle">Sweet moments and memories together.</p>
+            <div class="grid">
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP1.jpg" title="First meet up at Enchanted Kingdom."><img src="IMAGES/MYGIRLFRIENDDUMP1.jpg" alt="Girlfriend 1"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP2.jpg" title="Cozy moments at Starbucks MOA."><img src="IMAGES/MYGIRLFRIENDDUMP2.jpg" alt="Girlfriend 2"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP3.jpg" title="Celebrating 1st Anniversary at NB Lounge."><img src="IMAGES/MYGIRLFRIENDDUMP3.jpg" alt="Girlfriend 3"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP4.jpg" title="Enjoying moments at D'Baristroe Cafe."><img src="IMAGES/MYGIRLFRIENDDUMP4.jpg" alt="Girlfriend 4"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP5.jpg" title="Discovering historical things at Manila National Museum."><img src="IMAGES/MYGIRLFRIENDDUMP5.jpg" alt="Girlfriend 5"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP6.jpg" title="Endless smile at Cafe Alea Bistro Calamba."><img src="IMAGES/MYGIRLFRIENDDUMP6.jpg" alt="Girlfriend 6"></a></div>
+            </div>
+        </section>
+
+        <div class="btn-container">
+            <a href="index.html" class="btn">← Back to Home</a>
+        </div>
+
+        <footer>
+            <p>© 2026 • Photo Dump • John Paul</p>
+        </footer>
+    </div>
+
+</body>
+</html>

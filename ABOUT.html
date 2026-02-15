@@ -37,7 +37,40 @@
             margin-bottom: 20px;
             color: #6B5E48;
         }
+        
+        /* Video section */
+        .video-block {
+            margin: 30px 0 10px 0;
+            text-align: center;
+        }
 
+        .video-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            background: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-info {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #756953;
+            line-height: 1.5;
+        }
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -86,6 +119,23 @@
             <strong>Cybersecurity professional</strong> who can contribute security and practical
             solutions in the technology industry.
         </p>
+        
+        <div class="video-block">
+            <figure>
+                <div class="video-wrapper">
+                    <video controls playsinline preload="metadata">
+                        <source src="VIDEOS/ABOUTMEVIDEO.mp4" type="video/mp4">
+                        Your browser does not support the video tag. You can
+                        <a href="VIDEOS/ABOUTMEVIDEO.mp4">download the video here</a>.
+                    </video>
+                </div>
+                <figcaption class="video-info">
+                    <strong>About Me — Short Introduction</strong> — A brief personal introduction highlighting
+                    background, interests, and goals. Use the controls above to play, pause, or scrub through the video.
+                    <span style="display:block;margin-top:6px;"><a href="VIDEOS/ABOUTMEVIDEO.mp4" download>Download the video</a></span>
+                </figcaption>
+            </figure>
+        </div>
 
         <div class="btn-container">
             <a href="index.html" class="btn">← Back to Home</a>
