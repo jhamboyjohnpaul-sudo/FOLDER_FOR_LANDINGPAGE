@@ -107,17 +107,16 @@
       display: flex;
       flex-direction: column;
       padding: 20px;
-      align-items: center; /* Centers items horizontally */
+      align-items: center; 
     }
 
     .song-item:hover {
       transform: translateY(-5px);
     }
 
-    /* Song Image Container - FIXED SIZING */
     .song-image {
       width: 100%;
-      height: 250px; /* Uniform height */
+      height: 250px; 
       margin: -20px -20px 20px -20px;
       overflow: hidden;
       border-radius: 12px 12px 0 0;
@@ -130,7 +129,7 @@
     .song-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures all images fill the space without distortion */
+      object-fit: cover; 
       display: block;
     }
 
@@ -187,6 +186,14 @@
       border-radius: 16px;
     }
 
+    .disclaimer {
+      font-size: 11px;
+      color: #9A8F7A;
+      margin-top: 10px;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
     @media (max-width: 1024px) {
       .song-list { grid-template-columns: repeat(2, 1fr); }
     }
@@ -221,7 +228,7 @@
           <div class="song-content">
             <h3 class="song-title">Yellow</h3>
             <p class="song-artist">Artist: Coldplay</p>
-            <p class="song-description">A timeless soft rock masterpiece that captures the essence of longing and emotion with gentle piano melodies.</p>
+            <p class="song-description">A masterpiece of atmosphere and emotion. All rights to this track belong to Coldplay and their respective labels.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/SOFTROCKYELLOW1.mp4" type="audio/mpeg">
@@ -237,7 +244,7 @@
           <div class="song-content">
             <h3 class="song-title">How to Save a Life</h3>
             <p class="song-artist">Artist: The Fray</p>
-            <p class="song-description">An inspiring soft rock ballad that speaks to the power of human connection and compassion.</p>
+            <p class="song-description">An inspiring ballad on human connection. Music and lyrics remain the property of The Fray and Sony Music.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/SOFTROCKSAVEALIFE2.mp4" type="audio/mpeg">
@@ -251,9 +258,9 @@
             <img src="IMAGES/SR-SEPTEMBERENDS3.jpg" alt="September Ends">
           </div>
           <div class="song-content">
-            <h3 class="song-title">September Ends</h3>
+            <h3 class="song-title">Wake Me Up When September Ends</h3>
             <p class="song-artist">Artist: Green Day</p>
-            <p class="song-description">A poignant soft rock ballad exploring themes of loss and nostalgia with a delicate acoustic arrangement.</p>
+            <p class="song-description">A deeply personal track exploring loss. Audio rights belong to Green Day and Warner Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/SOFTROCKSEPTEMBERENDS3.mp4" type="audio/mpeg">
@@ -269,7 +276,7 @@
           <div class="song-content">
             <h3 class="song-title">Heaven</h3>
             <p class="song-artist">Artist: Bryan Adams</p>
-            <p class="song-description">A classic power ballad that has captivated audiences for decades with soaring vocals.</p>
+            <p class="song-description">A quintessential power ballad. This audio content is the property of Bryan Adams and A&M Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/SOFTROCKHEAVEN4.mp4" type="audio/mpeg">
@@ -285,7 +292,7 @@
           <div class="song-content">
             <h3 class="song-title">You and Me</h3>
             <p class="song-artist">Artist: Lifehouse</p>
-            <p class="song-description">A tender and intimate ballad that celebrates the beauty of a simple love story.</p>
+            <p class="song-description">A tender look at simple love. Rights for this track are held by Lifehouse and Geffen Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/SOFTROCKYOUANDME5.mp4" type="audio/mpeg">
@@ -301,7 +308,7 @@
           <div class="song-content">
             <h3 class="song-title">The Only Exception</h3>
             <p class="song-artist">Artist: Paramore</p>
-            <p class="song-description">A smooth track that blends pop sensibilities with rock, featuring emotionally resonant lyrics.</p>
+            <p class="song-description">A beautiful blend of pop and rock. All intellectual property belongs to Paramore and Fueled By Ramen.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/SOFTROCKEXCEPTION6.mp4" type="audio/mpeg">
@@ -314,7 +321,11 @@
     </div>
 
     <footer>
-      © 2026 • John Paul's Music Collection
+      <div>© 2026 • John Paul's Music Collection</div>
+      <div class="disclaimer">
+        No copyright infringement intended. This website is for personal use and educational demonstration only. 
+        All music, lyrics, and imagery belong to their respective owners and artists.
+      </div>
     </footer>
 
   </div>

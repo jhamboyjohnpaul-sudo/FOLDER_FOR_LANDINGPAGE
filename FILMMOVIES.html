@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>My Beats - John Paul's Music Collection</title>
+  <title>Film Movies - John Paul's Collection</title>
 
   <style>
     body {
@@ -53,7 +53,7 @@
       border-radius: 8px;
       font-weight: 700;
       font-size: 14px;
-      transition: background-color 0.18s ease, transform 0.12s ease, color 0.18s ease;
+      transition: background-color 0.18s ease, transform 0.12s ease;
       display: inline-block;
     }
 
@@ -78,15 +78,7 @@
       font-weight: 500;
     }
 
-    h2 {
-      margin-top: 0;
-      color: #5A4E3C;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 24px;
-    }
-
-    /* Music Genre Grid */
+    /* Genre Grid */
     .genre-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -101,6 +93,8 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
+      display: flex;
+      flex-direction: column;
     }
 
     .genre-card:hover {
@@ -117,7 +111,6 @@
       color: #5A4E3C;
       font-size: 22px;
       margin: 15px 0;
-      letter-spacing: 0.5px;
     }
 
     .genre-card p {
@@ -125,6 +118,7 @@
       font-size: 15px;
       line-height: 1.7;
       margin: 15px 0;
+      flex-grow: 1;
     }
 
     .btn {
@@ -134,13 +128,9 @@
       color: #FFFDF6;
       text-decoration: none;
       border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
       font-weight: bold;
-      letter-spacing: 0.5px;
+      font-size: 14px;
       transition: background-color 0.3s ease;
-      font-family: Tahoma, Verdana, sans-serif;
       margin-top: 10px;
     }
 
@@ -156,29 +146,11 @@
       color: #7A6F5A;
       background-color: #FFFDF6;
       border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width: 768px) {
-      .genre-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-      }
-
-      footer {
-        padding: 30px 20px;
-      }
+      .genre-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
     }
   </style>
 </head>
@@ -186,50 +158,42 @@
 <body>
   <div class="container">
 
-    <!-- Hero Section -->
     <div class="hero">
       <nav class="hero-nav" aria-label="Primary">
-        <a href="index.html">← Back to Home</a>
+        <a href="MYBEATS.html">← Back to My Beats</a>
+        <a href="index.html">Home</a>
       </nav>
-      <h1>🎵 My Beats</h1>
-      <div class="subtitle">Explore My Music Taste Collection Categorized by Genre</div>
+      <h1>🎬 Film Collection</h1>
+      <div class="subtitle">A Curated Overview of My Favorite Cinematic Film Movies</div>
     </div>
 
-    <!-- Music Genre Overview -->
     <div class="genre-grid">
 
-      <!-- Soft Rock -->
       <div class="genre-card">
-        <h3>Soft Rock</h3>
-        <p>Mellow and melodic rock music that combines smooth vocals with gentle instrumentation. Perfect for relaxing and unwinding.</p>
-        <a href="SOFTROCK.html" class="btn">Explore Soft Rock</a>
+        <h3>Disaster</h3>
+        <p>High-stakes survival stories featuring catastrophic events, from natural tsunamis 
+           to cosmic impacts.</p>
+        <a href="DISASTER.html" class="btn">Explore Disaster</a>
       </div>
 
-      <!-- OPM Alternative Rock -->
       <div class="genre-card">
-        <h3>OPM Alternative Rock</h3>
-        <p>Original Pilipino Music with an alternative rock edge. Featuring local bands that blend Filipino culture with modern rock sounds.</p>
-        <a href="OPMALTROCK.html" class="btn">Explore OPM Alt Rock</a>
+        <h3>Pandemic</h3>
+        <p>Thrillers exploring the global spread of contagious pathogens, including zombie 
+           virus outbreaks.</p>
+        <a href="PANDEMIC.html" class="btn">Explore Pandemic</a>
       </div>
 
-      <!-- Post-Grunge -->
       <div class="genre-card">
-        <h3>Post-Grunge</h3>
-        <p>A more radio-friendly evolution of grunge, featuring powerful vocals and heavy guitar riffs with accessible melodies. Emerging in the mid-1990s.</p>
-        <a href="POSTGRUNGE.html" class="btn">Explore Post-Grunge</a>
-      </div>
-
-      <!-- Pop Hits -->
-      <div class="genre-card">
-        <h3>Pop Hits</h3>
-        <p>Catchy and upbeat tracks that dominate the charts. From contemporary pop to timeless classics that everyone loves. Designed to appeal to a wide audience.</p>
-        <a href="POPHITS.html" class="btn">Explore Pop Hits</a>
+        <h3>Action/Thriller</h3>
+        <p>Pulse-pounding spectacles featuring intense stunts, crime-fighting, and high-speed 
+           chases.</p>
+        <a href="ACTIONTHRILLER.html" class="btn">Explore Action/Thriller</a>
       </div>
 
     </div>
 
     <footer>
-      © 2026 • John Paul's Music Collection
+      © 2026 • John Paul's Film Collection
     </footer>
 
   </div>

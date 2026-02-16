@@ -107,18 +107,17 @@
       display: flex;
       flex-direction: column;
       padding: 20px;
-      align-items: center; /* Centers everything inside the card */
+      align-items: center; 
     }
 
     .song-item:hover {
       transform: translateY(-5px);
     }
 
-    /* Song Image Container - CENTERED AND UNIFORM */
     .song-image {
       width: 100%;
-      height: 250px; /* Fixed height for all images */
-      margin: -20px -20px 20px -20px; /* Aligns to top of card */
+      height: 250px; 
+      margin: -20px -20px 20px -20px;
       overflow: hidden;
       border-radius: 12px 12px 0 0;
       display: flex;
@@ -130,7 +129,7 @@
     .song-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Centers the focus and fills the box */
+      object-fit: cover; 
       display: block;
     }
 
@@ -187,6 +186,14 @@
       border-radius: 16px;
     }
 
+    .disclaimer {
+      font-size: 11px;
+      color: #9A8F7A;
+      margin-top: 10px;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
     @media (max-width: 1024px) {
       .song-list { grid-template-columns: repeat(2, 1fr); }
     }
@@ -221,7 +228,7 @@
           <div class="song-content">
             <h3 class="song-title">Home</h3>
             <p class="song-artist">Artist: Daughtry</p>
-            <p class="song-description">A soulful post-grunge ballad about finding one's way back to where they belong, featuring powerful, gritty vocals.</p>
+            <p class="song-description">A powerful track about belonging. All rights belong to Chris Daughtry and RCA/19 Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/PGHOME1.mp4" type="audio/mpeg">
@@ -237,7 +244,7 @@
           <div class="song-content">
             <h3 class="song-title">Here Without You</h3>
             <p class="song-artist">Artist: 3 Doors Down</p>
-            <p class="song-description">A quintessential post-grunge track that explores the pain of distance and the persistence of memory.</p>
+            <p class="song-description">A track exploring distance and memory. Intellectual property belongs to 3 Doors Down and Republic Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/PGHEREWITHOUTYOU2.mp4" type="audio/mpeg">
@@ -253,7 +260,7 @@
           <div class="song-content">
             <h3 class="song-title">Far Away</h3>
             <p class="song-artist">Artist: Nickelback</p>
-            <p class="song-description">A melodic and emotional track about the lengths one would go for love and the desire to bridge any gap.</p>
+            <p class="song-description">A melodic track about the endurance of love. All rights belong to Nickelback and Roadrunner Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/PGFARAWAY3.mp4" type="audio/mpeg">
@@ -269,7 +276,7 @@
           <div class="song-content">
             <h3 class="song-title">Lips of an Angel</h3>
             <p class="song-artist">Artist: Hinder</p>
-            <p class="song-description">A popular ballad about a late-night phone call from a past love, capturing complicated lingering feelings.</p>
+            <p class="song-description">A song exploring complex emotional temptations. Property of Hinder and Universal Republic Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/PGLIPSOFANANGEL4.mp4" type="audio/mpeg">
@@ -285,7 +292,7 @@
           <div class="song-content">
             <h3 class="song-title">My Sacrifice</h3>
             <p class="song-artist">Artist: Creed</p>
-            <p class="song-description">An uplifting anthem about reconnection and sacrifice, featuring a soaring chorus and powerful guitar work.</p>
+            <p class="song-description">An uplifting anthem of reconnection. Audio rights belong to Creed and Wind-up Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/PGMYSACRIFICE5.mp4" type="audio/mpeg">
@@ -301,7 +308,7 @@
           <div class="song-content">
             <h3 class="song-title">Wherever You Will Go</h3>
             <p class="song-artist">Artist: The Calling</p>
-            <p class="song-description">A deep-voiced ballad about eternal devotion and the promise to support a loved one through life's journeys.</p>
+            <p class="song-description">A ballad of eternal devotion. Intellectual property belongs to The Calling and RCA Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/PGWHEREVERYOUWILLGO6.mp4" type="audio/mpeg">
@@ -314,7 +321,11 @@
     </div>
 
     <footer>
-      © 2026 • John Paul's Music Collection
+      <div>© 2026 • John Paul's Music Collection</div>
+      <div class="disclaimer">
+        No copyright infringement intended. This website is for personal use and educational demonstration only. 
+        All music, lyrics, and imagery belong to their respective owners and artists.
+      </div>
     </footer>
 
   </div>

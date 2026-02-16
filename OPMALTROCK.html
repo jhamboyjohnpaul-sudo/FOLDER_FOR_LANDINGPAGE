@@ -31,7 +31,6 @@
       text-align: center;
     }
 
-    /* Hero navigation bar */
     .hero-nav {
       display: inline-flex;
       gap: 12px;
@@ -48,18 +47,16 @@
     .hero-nav a {
       text-decoration: none;
       color: #5A4E3C;
-      background: transparent;
       padding: 8px 14px;
       border-radius: 8px;
       font-weight: 700;
       font-size: 14px;
-      transition: background-color 0.18s ease, transform 0.12s ease, color 0.18s ease;
+      transition: background-color 0.18s ease, transform 0.12s ease;
       display: inline-block;
     }
 
     .hero-nav a:hover {
       background-color: #F0E8D8;
-      color: #3F3B33;
       transform: translateY(-2px);
     }
 
@@ -75,7 +72,6 @@
       color: #6B5E48;
       margin-top: 8px;
       font-size: 18px;
-      font-weight: 500;
     }
 
     /* Song List Section */
@@ -107,23 +103,21 @@
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
       padding: 20px;
-      align-items: center; /* Centers content horizontally */
+      align-items: center; 
     }
 
     .song-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
-    /* Song Image Container - EDITED FOR UNIFORMITY */
     .song-image {
       width: 100%;
-      height: 250px; /* Fixed height for all images */
-      margin: -20px -20px 20px -20px; /* Keeps image flushed to top/sides */
+      height: 250px; 
+      margin: -20px -20px 20px -20px;
       overflow: hidden;
       border-radius: 12px 12px 0 0;
       display: flex;
@@ -135,11 +129,10 @@
     .song-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Forces images to fill the box while maintaining aspect ratio */
+      object-fit: cover; 
       display: block;
     }
 
-    /* Song Content */
     .song-content {
       width: 100%;
       flex: 1;
@@ -152,7 +145,6 @@
       font-size: 20px;
       font-weight: 700;
       margin: 0 0 8px 0;
-      letter-spacing: 0.5px;
       text-align: center;
     }
 
@@ -173,7 +165,6 @@
       flex: 1;
     }
 
-    /* Audio Player Styling */
     .audio-player {
       margin-top: auto;
       padding-top: 15px;
@@ -184,30 +175,30 @@
     .audio-player audio {
       width: 100%;
       height: 40px;
-      border-radius: 20px;
-      background-color: #3F3B33;
     }
 
     footer {
       text-align: center;
       padding: 30px 60px;
       margin-top: 30px;
-      font-size: 14px;
       color: #7A6F5A;
       background-color: #FFFDF6;
       border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      color: #9A8F7A;
+      margin-top: 10px;
+      font-style: italic;
+      line-height: 1.4;
     }
 
     @media (max-width: 1024px) {
-      .song-list {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .song-list { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
-      .hero, .song-section { padding: 20px; }
-      h1 { font-size: 24px; }
       .song-list { grid-template-columns: 1fr; }
       .song-image { height: 220px; }
     }
@@ -237,7 +228,7 @@
           <div class="song-content">
             <h3 class="song-title">Synesthesia</h3>
             <p class="song-artist">Artist: Mayonnaise</p>
-            <p class="song-description">A powerful OPM alternative rock anthem that explores the crossing of senses.</p>
+            <p class="song-description">A powerful anthem exploring sensory connections. All rights belong to Mayonnaise and their recording label.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/OPMSYNESTHESIA1.mp4" type="audio/mpeg">
@@ -253,7 +244,7 @@
           <div class="song-content">
             <h3 class="song-title">Kung Wala Ka</h3>
             <p class="song-artist">Artist: Hale</p>
-            <p class="song-description">A melancholic yet beautiful track about the void left by a loved one.</p>
+            <p class="song-description">A melancholic track about longing. Original music and lyrics are property of Hale and EMI Philippines.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/OPMKUNGWALAKA2.mp4" type="audio/mpeg">
@@ -269,7 +260,7 @@
           <div class="song-content">
             <h3 class="song-title">You'll Be Safe Here</h3>
             <p class="song-artist">Artist: Rivermaya</p>
-            <p class="song-description">An iconic song of comfort and protection. Its soaring melodies are timeless.</p>
+            <p class="song-description">A timeless song of comfort. Intellectual property belongs to Rivermaya and Viva Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/OPMYOULLBESAFEHERE3.mp4" type="audio/mpeg">
@@ -285,7 +276,7 @@
           <div class="song-content">
             <h3 class="song-title">Bulong</h3>
             <p class="song-artist">Artist: December Avenue</p>
-            <p class="song-description">A track that blends alternative rock with soulful storytelling and silent prayers.</p>
+            <p class="song-description">A track blending rock with soulful storytelling. Rights are held by Kitchie Nadal and Be.Live Artist Management.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/OPMBULONG4.mp4" type="audio/mpeg">
@@ -301,7 +292,7 @@
           <div class="song-content">
             <h3 class="song-title">Kundiman</h3>
             <p class="song-artist">Artist: Silent Sanctuary</p>
-            <p class="song-description">A modern take on the traditional Filipino love song with rock and strings.</p>
+            <p class="song-description">A modern Filipino love song. Audio content is property of Silent Sanctuary and Ivory Music.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/OPMKUNDIMAN5.mp4" type="audio/mpeg">
@@ -317,7 +308,7 @@
           <div class="song-content">
             <h3 class="song-title">Kay Tagal Kitang Hinintay</h3>
             <p class="song-artist">Artist: Sponge Cola</p>
-            <p class="song-description">A song about patience and the joy of finally finding the one you've been waiting for.</p>
+            <p class="song-description">A song about enduring patience. All rights belong to Sponge Cola and Universal Records.</p>
             <div class="audio-player">
               <audio controls>
                 <source src="MUSIC/OPMKAYTAGALKITANGHINIHINTAY6.mp4" type="audio/mpeg">
@@ -330,7 +321,11 @@
     </div>
 
     <footer>
-      © 2026 • John Paul's Music Collection
+      <div>© 2026 • John Paul's Music Collection</div>
+      <div class="disclaimer">
+        No copyright infringement intended. This website is for personal use and educational demonstration only. 
+        All music, lyrics, and imagery belong to their respective owners and artists.
+      </div>
     </footer>
 
   </div>
