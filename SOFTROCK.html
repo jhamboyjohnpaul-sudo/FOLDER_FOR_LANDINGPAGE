@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soft Rock - My Beats</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+      font-family: Tahoma, Verdana, sans-serif;
+      color: #3F3B33;
+    }
+
+    .container {
+      max-width: 1450px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #FFFDF6;
+      padding: 40px 50px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-nav {
+      display: inline-flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #FFFDF6;
+      padding: 8px 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #E8DCC8;
+    }
+
+    .hero-nav a {
+      text-decoration: none;
+      color: #5A4E3C;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background-color 0.18s ease, transform 0.12s ease;
+      display: inline-block;
+    }
+
+    .hero-nav a:hover {
+      background-color: #F0E8D8;
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      color: #5A4E3C;
+      margin: 0;
+      letter-spacing: 1px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #6B5E48;
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    /* Song List Section */
+    .song-section {
+      padding: 40px 50px;
+      margin-bottom: 30px;
+    }
+
+    .song-section h2 {
+      color: #5A4E3C;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .song-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .song-item {
+      background-color: #FFFDF6;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center; /* Centers items horizontally */
+    }
+
+    .song-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Song Image Container - FIXED SIZING */
+    .song-image {
+      width: 100%;
+      height: 250px; /* Uniform height */
+      margin: -20px -20px 20px -20px;
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .song-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures all images fill the space without distortion */
+      display: block;
+    }
+
+    .song-content {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .song-title {
+      color: #5A4E3C;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      text-align: center;
+    }
+
+    .song-artist {
+      color: #6B5E48;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+
+    .song-description {
+      color: #6B5E48;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+      text-align: center;
+      flex: 1;
+    }
+
+    .audio-player {
+      margin-top: auto;
+      padding-top: 15px;
+      border-top: 1px solid #E8DCC8;
+      width: 100%;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 40px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 60px;
+      margin-top: 30px;
+      color: #7A6F5A;
+      background-color: #FFFDF6;
+      border-radius: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      .song-list { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .song-list { grid-template-columns: 1fr; }
+      .song-image { height: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <nav class="hero-nav" aria-label="Primary">
+        <a href="MYBEATS.html">← Back to My Beats</a>
+        <a href="index.html">Home</a>
+      </nav>
+      <h1>🎸 Soft Rock</h1>
+      <div class="subtitle">Mellow and Melodic Rock Music</div>
+    </div>
+
+    <div class="song-section">
+      <h2>Song Collection</h2>
+      <ul class="song-list">
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/SR-YELLOW1.jpg" alt="Yellow">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Yellow</h3>
+            <p class="song-artist">Artist: Coldplay</p>
+            <p class="song-description">A timeless soft rock masterpiece that captures the essence of longing and emotion with gentle piano melodies.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/SOFTROCKYELLOW1.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/SR-SAVEALIFE2.jpg" alt="Save a Life">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">How to Save a Life</h3>
+            <p class="song-artist">Artist: The Fray</p>
+            <p class="song-description">An inspiring soft rock ballad that speaks to the power of human connection and compassion.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/SOFTROCKSAVEALIFE2.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/SR-SEPTEMBERENDS3.jpg" alt="September Ends">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">September Ends</h3>
+            <p class="song-artist">Artist: Green Day</p>
+            <p class="song-description">A poignant soft rock ballad exploring themes of loss and nostalgia with a delicate acoustic arrangement.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/SOFTROCKSEPTEMBERENDS3.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/SR-HEAVEN4.jpg" alt="Heaven">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Heaven</h3>
+            <p class="song-artist">Artist: Bryan Adams</p>
+            <p class="song-description">A classic power ballad that has captivated audiences for decades with soaring vocals.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/SOFTROCKHEAVEN4.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/SR-YOUANDME5.jpg" alt="You and Me">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">You and Me</h3>
+            <p class="song-artist">Artist: Lifehouse</p>
+            <p class="song-description">A tender and intimate ballad that celebrates the beauty of a simple love story.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/SOFTROCKYOUANDME5.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/SR-EXCEPTION6.jpg" alt="Exception">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">The Only Exception</h3>
+            <p class="song-artist">Artist: Paramore</p>
+            <p class="song-description">A smooth track that blends pop sensibilities with rock, featuring emotionally resonant lyrics.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/SOFTROCKEXCEPTION6.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <footer>
+      © 2026 • John Paul's Music Collection
+    </footer>
+
+  </div>
+</body>
+
+</html>

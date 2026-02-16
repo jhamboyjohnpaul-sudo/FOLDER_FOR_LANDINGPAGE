@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Beats - John Paul's Music Collection</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+      font-family: Tahoma, Verdana, sans-serif;
+      color: #3F3B33;
+    }
+
+    .container {
+      max-width: 1450px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #FFFDF6;
+      padding: 40px 50px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      text-align: center;
+    }
+
+    /* Hero navigation bar */
+    .hero-nav {
+      display: inline-flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #FFFDF6;
+      padding: 8px 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #E8DCC8;
+    }
+
+    .hero-nav a {
+      text-decoration: none;
+      color: #5A4E3C;
+      background: transparent;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background-color 0.18s ease, transform 0.12s ease, color 0.18s ease;
+      display: inline-block;
+    }
+
+    .hero-nav a:hover {
+      background-color: #F0E8D8;
+      color: #3F3B33;
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      color: #5A4E3C;
+      margin: 0;
+      letter-spacing: 1px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #6B5E48;
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #5A4E3C;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 24px;
+    }
+
+    /* Music Genre Grid */
+    .genre-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .genre-card {
+      background-color: #FFFDF6;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .genre-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .genre-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .genre-card h3 {
+      color: #5A4E3C;
+      font-size: 22px;
+      margin: 15px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .genre-card p {
+      color: #6B5E48;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #5A4E3C;
+      color: #FFFDF6;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease;
+      font-family: Tahoma, Verdana, sans-serif;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #6B5E48;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 60px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #7A6F5A;
+      background-color: #FFFDF6;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .genre-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      footer {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <nav class="hero-nav" aria-label="Primary">
+        <a href="index.html">← Back to Home</a>
+      </nav>
+      <h1>🎵 My Beats</h1>
+      <div class="subtitle">Explore My Music Taste Collection Categorized by Genre</div>
+    </div>
+
+    <!-- Music Genre Overview -->
+    <div class="genre-grid">
+
+      <!-- Soft Rock -->
+      <div class="genre-card">
+        <div class="genre-icon">🎸</div>
+        <h3>Soft Rock</h3>
+        <p>Mellow and melodic rock music that combines smooth vocals with gentle instrumentation. Perfect for relaxing and unwinding.</p>
+        <a href="SOFTROCK.html" class="btn">Explore Soft Rock</a>
+      </div>
+
+      <!-- OPM Alternative Rock -->
+      <div class="genre-card">
+        <div class="genre-icon">🎤</div>
+        <h3>OPM Alternative Rock</h3>
+        <p>Original Pilipino Music with an alternative rock edge. Featuring local bands that blend Filipino culture with modern rock sounds.</p>
+        <a href="OPMALTROCK.html" class="btn">Explore OPM Alt Rock</a>
+      </div>
+
+      <!-- Post-Grunge -->
+      <div class="genre-card">
+        <div class="genre-icon">🤘</div>
+        <h3>Post-Grunge</h3>
+        <p>A more radio-friendly evolution of grunge, featuring powerful vocals and heavy guitar riffs with accessible melodies. Emerging in the mid-1990s.</p>
+        <a href="POSTGRUNGE.html" class="btn">Explore Post-Grunge</a>
+      </div>
+
+      <!-- Pop Hits -->
+      <div class="genre-card">
+        <div class="genre-icon">🎶</div>
+        <h3>Pop Hits</h3>
+        <p>Catchy and upbeat tracks that dominate the charts. From contemporary pop to timeless classics that everyone loves. Designed to appeal to a wide audience.</p>
+        <a href="POPHITS.html" class="btn">Explore Pop Hits</a>
+      </div>
+
+    </div>
+
+    <footer>
+      © 2026 • John Paul's Music Collection
+    </footer>
+
+  </div>
+</body>
+
+</html>

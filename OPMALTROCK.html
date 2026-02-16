@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OPM Alternative Rock - My Beats</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+      font-family: Tahoma, Verdana, sans-serif;
+      color: #3F3B33;
+    }
+
+    .container {
+      max-width: 1450px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #FFFDF6;
+      padding: 40px 50px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      text-align: center;
+    }
+
+    /* Hero navigation bar */
+    .hero-nav {
+      display: inline-flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #FFFDF6;
+      padding: 8px 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #E8DCC8;
+    }
+
+    .hero-nav a {
+      text-decoration: none;
+      color: #5A4E3C;
+      background: transparent;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background-color 0.18s ease, transform 0.12s ease, color 0.18s ease;
+      display: inline-block;
+    }
+
+    .hero-nav a:hover {
+      background-color: #F0E8D8;
+      color: #3F3B33;
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      color: #5A4E3C;
+      margin: 0;
+      letter-spacing: 1px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #6B5E48;
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* Song List Section */
+    .song-section {
+      padding: 40px 50px;
+      margin-bottom: 30px;
+    }
+
+    .song-section h2 {
+      color: #5A4E3C;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .song-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .song-item {
+      background-color: #FFFDF6;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center; /* Centers content horizontally */
+    }
+
+    .song-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Song Image Container - EDITED FOR UNIFORMITY */
+    .song-image {
+      width: 100%;
+      height: 250px; /* Fixed height for all images */
+      margin: -20px -20px 20px -20px; /* Keeps image flushed to top/sides */
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .song-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Forces images to fill the box while maintaining aspect ratio */
+      display: block;
+    }
+
+    /* Song Content */
+    .song-content {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .song-title {
+      color: #5A4E3C;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .song-artist {
+      color: #6B5E48;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+
+    .song-description {
+      color: #6B5E48;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* Audio Player Styling */
+    .audio-player {
+      margin-top: auto;
+      padding-top: 15px;
+      border-top: 1px solid #E8DCC8;
+      width: 100%;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #3F3B33;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 60px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #7A6F5A;
+      background-color: #FFFDF6;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 1024px) {
+      .song-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero, .song-section { padding: 20px; }
+      h1 { font-size: 24px; }
+      .song-list { grid-template-columns: 1fr; }
+      .song-image { height: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <nav class="hero-nav" aria-label="Primary">
+        <a href="MYBEATS.html">← Back to My Beats</a>
+        <a href="index.html">Home</a>
+      </nav>
+      <h1>🎤 OPM Alternative Rock</h1>
+      <div class="subtitle">Original Pilipino Music with an Alternative Edge</div>
+    </div>
+
+    <div class="song-section">
+      <h2>Song Collection</h2>
+      <ul class="song-list">
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/OPM-SYNESTHESIA1.jpg" alt="Synesthesia">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Synesthesia</h3>
+            <p class="song-artist">Artist: Mayonnaise</p>
+            <p class="song-description">A powerful OPM alternative rock anthem that explores the crossing of senses.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/OPMSYNESTHESIA1.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/OPM-KUNGWALAKA2.jpg" alt="Kung Wala Ka">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Kung Wala Ka</h3>
+            <p class="song-artist">Artist: Hale</p>
+            <p class="song-description">A melancholic yet beautiful track about the void left by a loved one.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/OPMKUNGWALAKA2.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/OPM-YOULLBESAFEHERE3.jpg" alt="You'll Be Safe Here">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">You'll Be Safe Here</h3>
+            <p class="song-artist">Artist: Rivermaya</p>
+            <p class="song-description">An iconic song of comfort and protection. Its soaring melodies are timeless.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/OPMYOULLBESAFEHERE3.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/OPM-BULONG4.jpg" alt="Bulong">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Bulong</h3>
+            <p class="song-artist">Artist: December Avenue</p>
+            <p class="song-description">A track that blends alternative rock with soulful storytelling and silent prayers.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/OPMBULONG4.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/OPM-KUNDIMAN5.jpg" alt="Kundiman">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Kundiman</h3>
+            <p class="song-artist">Artist: Silent Sanctuary</p>
+            <p class="song-description">A modern take on the traditional Filipino love song with rock and strings.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/OPMKUNDIMAN5.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+        <li class="song-item">
+          <div class="song-image">
+            <img src="IMAGES/OPM-KAYTAGALKITANGHINIHINTAY6.jpg" alt="Kay Tagal Kitang Hinintay">
+          </div>
+          <div class="song-content">
+            <h3 class="song-title">Kay Tagal Kitang Hinintay</h3>
+            <p class="song-artist">Artist: Sponge Cola</p>
+            <p class="song-description">A song about patience and the joy of finally finding the one you've been waiting for.</p>
+            <div class="audio-player">
+              <audio controls>
+                <source src="MUSIC/OPMKAYTAGALKITANGHINIHINTAY6.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <footer>
+      © 2026 • John Paul's Music Collection
+    </footer>
+
+  </div>
+</body>
+
+</html>

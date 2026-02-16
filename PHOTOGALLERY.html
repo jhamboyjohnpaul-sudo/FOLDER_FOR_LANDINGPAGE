@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery - John Paul</title>
     <style>
-        /* --- Variables --- */
+ 
         :root {
             --beige-100: #FFFDF6;
             --beige-200: #FFF6EE;
@@ -18,7 +18,6 @@
             --shadow-hover: rgba(0, 0, 0, 0.18);
         }
 
-        /* --- Base Styles --- */
         * {
             box-sizing: border-box;
         }
@@ -36,7 +35,6 @@
             line-height: 1.5;
         }
 
-        /* --- Layout --- */
         .container {
             text-align: center;
             max-width: 1100px;
@@ -47,7 +45,6 @@
             box-shadow: 0 12px 30px var(--shadow-subtle);
         }
 
-        /* --- Typography --- */
         h1 {
             color: var(--accent);
             text-align: center;
@@ -63,7 +60,6 @@
             font-size: 15px;
         }
 
-        /* --- Category Sections --- */
         .section {
             margin-top: 40px;
         }
@@ -88,7 +84,6 @@
             padding-left: 4px;
         }
 
-        /* --- Photo Grid --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -96,7 +91,6 @@
             align-items: stretch;
         }
 
-        /* --- Photo Card --- */
         .photo-card {
             border-radius: 10px;
             overflow: hidden;
@@ -106,8 +100,8 @@
             position: relative;
             transition: border-color 0.18s ease, transform 0.18s ease;
             aspect-ratio: 1 / 1;
-            padding: 8px;               /* inner padded frame */
-            box-sizing: border-box;     /* keep tile size unchanged */
+            padding: 8px;               
+            box-sizing: border-box;     
         }
 
         .photo-card a {
@@ -120,8 +114,8 @@
         }
 
         .photo-card img {
-            border-radius: 6px;        /* inner image rounded corner */
-            background: #fff;          /* subtle paper background for contrast */
+            border-radius: 6px;       
+            background: #fff;         
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             width: 100%;
             height: 100%;
@@ -142,7 +136,6 @@
             filter: brightness(1.02);
         }
 
-        /* Accessibility & Focus */
         .photo-card a:focus img,
         .photo-card a:focus-visible img {
             transform: scale(1.03);
@@ -153,7 +146,6 @@
             transform: scale(0.98);
         }
 
-        /* --- Buttons --- */
         .btn-container {
             text-align: center;
             margin-top: 40px;
@@ -216,12 +208,12 @@
             <div class="category-title">My Self</div>
             <p class="category-subtitle">Personal portraits of me from kids to collge.</p>
             <div class="grid">
-                <div class="photo-card"><a href="IMAGES/MYSELFDUMP1.jpg" title="A precious throwback with my Father."><img src="IMAGES/MYSELFDUMP1.jpg" alt="My Self 1"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYSELFDUMP2.jpg" title="Little me in my favorite red shirt."><img src="IMAGES/MYSELFDUMP2.jpg" alt="My Self 2"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYSELFDUMP3.jpg" title="A Grade 1 Moving up."><img src="IMAGES/MYSELFDUMP3.jpg" alt="My Self 3"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYSELFDUMP4.jpg" title="Casual days and mirror captures."><img src="IMAGES/MYSELFDUMP4.jpg" alt="My Self 4"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYSELFDUMP5.jpg" title="Escape Hike at DRT Bulacan."><img src="IMAGES/MYSELFDUMP5.jpg" alt="My Self 5"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYSELFDUMP6.jpg" title="Dressed up and ready for the big world."><img src="IMAGES/MYSELFDUMP6.jpg" alt="My Self 6"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP1.jpg" target="photo_view" title="A precious throwback with my Father."><img src="IMAGES/MYSELFDUMP1.jpg" alt="My Self 1"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP2.jpg" target="photo_view" title="Little me in my favorite red shirt."><img src="IMAGES/MYSELFDUMP2.jpg" alt="My Self 2"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP3.jpg" target="photo_view" title="A Grade 1 Moving up."><img src="IMAGES/MYSELFDUMP3.jpg" alt="My Self 3"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP4.jpg" target="photo_view" title="Casual days and mirror captures."><img src="IMAGES/MYSELFDUMP4.jpg" alt="My Self 4"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP5.jpg" target="photo_view" title="Escape Hike at DRT Bulacan."><img src="IMAGES/MYSELFDUMP5.jpg" alt="My Self 5"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYSELFDUMP6.jpg" target="photo_view" title="Dressed up and ready for the big world."><img src="IMAGES/MYSELFDUMP6.jpg" alt="My Self 6"></a></div>
             </div>
         </section>
 
@@ -229,12 +221,12 @@
             <div class="category-title">Travel</div>
             <p class="category-subtitle">Scenic captures and travel memories from around the places I've visited.</p>
             <div class="grid">
-                <div class="photo-card"><a href="IMAGES/TRAVELDUMP1.jpg" title="Wet ride at Dinadiawan Aurora."><img src="IMAGES/TRAVELDUMP1.jpg" alt="Travel 1"></a></div>
-                <div class="photo-card"><a href="IMAGES/TRAVELDUMP2.jpg" title="Huge Balete tree at Baler Aurora."><img src="IMAGES/TRAVELDUMP2.jpg" alt="Travel 2"></a></div>
-                <div class="photo-card"><a href="IMAGES/TRAVELDUMP3.jpg" title="Exploring the vibrant landmarks of Dingalan."><img src="IMAGES/TRAVELDUMP3.jpg" alt="Travel 3"></a></div>
-                <div class="photo-card"><a href="IMAGES/TRAVELDUMP4.jpg" title="Solo rides at Gabaldon Nueva Ecija."><img src="IMAGES/TRAVELDUMP4.jpg" alt="Travel 4"></a></div>
-                <div class="photo-card"><a href="IMAGES/TRAVELDUMP5.jpg" title="Facing the Mother Mayon volcano."><img src="IMAGES/TRAVELDUMP5.jpg" alt="Travel 5"></a></div>
-                <div class="photo-card"><a href="IMAGES/TRAVELDUMP6.jpg" title="Night rides at Alabang Town Center."><img src="IMAGES/TRAVELDUMP6.jpg" alt="Travel 6"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP1.jpg" target="photo_view" title="Wet ride at Dinadiawan Aurora."><img src="IMAGES/TRAVELDUMP1.jpg" alt="Travel 1"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP2.jpg" target="photo_view" title="Huge Balete tree at Baler Aurora."><img src="IMAGES/TRAVELDUMP2.jpg" alt="Travel 2"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP3.jpg" target="photo_view" title="Exploring the vibrant landmarks of Dingalan."><img src="IMAGES/TRAVELDUMP3.jpg" alt="Travel 3"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP4.jpg" target="photo_view" title="Solo rides at Gabaldon Nueva Ecija."><img src="IMAGES/TRAVELDUMP4.jpg" alt="Travel 4"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP5.jpg" target="photo_view" title="Facing the Mother Mayon volcano."><img src="IMAGES/TRAVELDUMP5.jpg" alt="Travel 5"></a></div>
+                <div class="photo-card"><a href="IMAGES/TRAVELDUMP6.jpg" target="photo_view" title="Night rides at Alabang Town Center."><img src="IMAGES/TRAVELDUMP6.jpg" alt="Travel 6"></a></div>
             </div>
         </section>
 
@@ -242,12 +234,12 @@
             <div class="category-title">My Girlfriend</div>
             <p class="category-subtitle">Sweet moments and memories together.</p>
             <div class="grid">
-                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP1.jpg" title="First meet up at Enchanted Kingdom."><img src="IMAGES/MYGIRLFRIENDDUMP1.jpg" alt="Girlfriend 1"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP2.jpg" title="Cozy moments at Starbucks MOA."><img src="IMAGES/MYGIRLFRIENDDUMP2.jpg" alt="Girlfriend 2"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP3.jpg" title="Celebrating 1st Anniversary at NB Lounge."><img src="IMAGES/MYGIRLFRIENDDUMP3.jpg" alt="Girlfriend 3"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP4.jpg" title="Enjoying moments at D'Baristroe Cafe."><img src="IMAGES/MYGIRLFRIENDDUMP4.jpg" alt="Girlfriend 4"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP5.jpg" title="Discovering historical things at Manila National Museum."><img src="IMAGES/MYGIRLFRIENDDUMP5.jpg" alt="Girlfriend 5"></a></div>
-                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP6.jpg" title="Endless smile at Cafe Alea Bistro Calamba."><img src="IMAGES/MYGIRLFRIENDDUMP6.jpg" alt="Girlfriend 6"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP1.jpg" target="photo_view" title="First meet up at Enchanted Kingdom."><img src="IMAGES/MYGIRLFRIENDDUMP1.jpg" alt="Girlfriend 1"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP2.jpg" target="photo_view" title="Cozy moments at Starbucks MOA."><img src="IMAGES/MYGIRLFRIENDDUMP2.jpg" alt="Girlfriend 2"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP3.jpg" target="photo_view" title="Celebrating 1st Anniversary at NB Lounge."><img src="IMAGES/MYGIRLFRIENDDUMP3.jpg" alt="Girlfriend 3"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP4.jpg" target="photo_view" title="Enjoying moments at D'Baristroe Cafe."><img src="IMAGES/MYGIRLFRIENDDUMP4.jpg" alt="Girlfriend 4"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP5.jpg" target="photo_view" title="Discovering historical things at Manila National Museum."><img src="IMAGES/MYGIRLFRIENDDUMP5.jpg" alt="Girlfriend 5"></a></div>
+                <div class="photo-card"><a href="IMAGES/MYGIRLFRIENDDUMP6.jpg" target="photo_view" title="Endless smile at Cafe Alea Bistro Calamba."><img src="IMAGES/MYGIRLFRIENDDUMP6.jpg" alt="Girlfriend 6"></a></div>
             </div>
         </section>
 
