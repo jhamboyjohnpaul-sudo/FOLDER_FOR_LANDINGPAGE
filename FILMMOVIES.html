@@ -1,202 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Film Movies - John Paul's Collection</title>
+<meta charset="UTF-8">
+<title>Film Movies - John Paul's Collection</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
-      font-family: Tahoma, Verdana, sans-serif;
-      color: #3F3B33;
-    }
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+  font-family: Tahoma, Verdana, sans-serif;
+  color: #3F3B33;
+}
 
-    .container {
-      max-width: 1450px;
-      margin: auto;
-      padding: 20px;
-    }
+/* Full Width Container */
+.container {
+  width: 95%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 40px 0;
+}
 
-    /* Hero Section */
-    .hero {
-      background-color: #FFFDF6;
-      padding: 40px 50px;
-      margin-bottom: 30px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-      position: relative;
-      text-align: center;
-    }
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #FFFDF6, #F5EBD9);
+  padding: 70px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  text-align: center;
+}
 
-    /* Hero navigation bar */
-    .hero-nav {
-      display: inline-flex;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      align-items: center;
-      background: #FFFDF6;
-      padding: 8px 12px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #E8DCC8;
-    }
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
 
-    .hero-nav a {
-      text-decoration: none;
-      color: #5A4E3C;
-      background: transparent;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: background-color 0.18s ease, transform 0.12s ease;
-      display: inline-block;
-    }
+.hero-nav a {
+  text-decoration: none;
+  color: #5A4E3C;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #F0E8D8;
+  transition: 0.3s;
+}
 
-    .hero-nav a:hover {
-      background-color: #F0E8D8;
-      color: #3F3B33;
-      transform: translateY(-2px);
-    }
+.hero-nav a:hover {
+  background: #5A4E3C;
+  color: white;
+  transform: scale(1.05);
+}
 
-    h1 {
-      color: #5A4E3C;
-      margin: 0;
-      letter-spacing: 1px;
-      font-size: 32px;
-      font-weight: 700;
-    }
+h1 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: 2px;
+}
 
-    .subtitle {
-      color: #6B5E48;
-      margin-top: 8px;
-      font-size: 18px;
-      font-weight: 500;
-    }
+.subtitle {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #6B5E48;
+}
 
-    /* Genre Grid */
-    .genre-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
+/* FEATURED SECTION */
+.featured {
+  margin: 50px 0;
+  padding: 50px;
+  border-radius: 20px;
+  background: #FFFDF6;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
 
-    .genre-card {
-      background-color: #FFFDF6;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-    }
+.featured h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
 
-    .genre-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+.featured p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
 
-    .genre-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
+/* GRID */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
 
-    .genre-card h3 {
-      color: #5A4E3C;
-      font-size: 22px;
-      margin: 15px 0;
-    }
+.genre-card {
+  background: #FFFDF6;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+}
 
-    .genre-card p {
-      color: #6B5E48;
-      font-size: 15px;
-      line-height: 1.7;
-      margin: 15px 0;
-      flex-grow: 1;
-    }
+.genre-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: #5A4E3C;
-      color: #FFFDF6;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-    }
+/* IMAGE STYLE */
+.genre-img {
+  width: 100%;
+  height: 220px;         
+  object-fit: cover;      
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
 
-    .btn:hover {
-      background-color: #6B5E48;
-    }
+.genre-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px 60px;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #7A6F5A;
-      background-color: #FFFDF6;
-      border-radius: 16px;
-    }
+.genre-card p {
+  font-size: 16px;
+  line-height: 1.8;
+}
 
-    @media (max-width: 768px) {
-      .genre-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 24px; }
-    }
-  </style>
+.btn {
+  margin-top: 20px;
+  padding: 14px 35px;
+  background: #5A4E3C;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3F3B33;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 40px;
+  text-align: center;
+  background: #5A4E3C;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 28px; }
+  .featured { padding: 30px; }
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="hero">
-      <nav class="hero-nav" aria-label="Primary">
-        <a href="MYBEATS.html">← Back to My Beats</a>
-        <a href="index.html">Home</a>
-      </nav>
-      <h1>🎬 Film Collection</h1>
-      <div class="subtitle">A Curated Overview of My Favorite Cinematic Film Movies</div>
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-nav">
+        <a href="index.html">← Back to Home</a>
+    </div>
+    <h1>Film Collection</h1>
+    <div class="subtitle">A Curated Overview of My Favorite Cinematic Experiences</div>
+  </div>
+
+  <div class="featured">
+    <h2>Why I Love Films</h2>
+    <p>
+      Movies allow me to explore different worlds, emotions, and perspectives. 
+      From heart-stopping disaster scenes to intense action thrillers, each genre 
+      tells a powerful story that leaves a lasting impact. This collection reflects 
+      my personal taste and cinematic inspiration.
+    </p>
+  </div>
+
+  <div class="genre-grid">
+
+    <div class="genre-card">
+      <img src="IMAGES/DISASTERIMAGE.jpg" alt="Disaster" class="genre-img">
+      <h3>Disaster</h3>
+      <p>High-stakes survival stories featuring catastrophic events, from massive tsunamis 
+         to world-ending asteroid impacts.</p>
+      <a href="DISASTER.html" class="btn">Explore Disaster</a>
     </div>
 
-    <div class="genre-grid">
-
-      <div class="genre-card">
-        <h3>Disaster</h3>
-        <p>High-stakes survival stories featuring catastrophic events, from natural tsunamis 
-           to cosmic impacts.</p>
-        <a href="DISASTER.html" class="btn">Explore Disaster</a>
-      </div>
-
-      <div class="genre-card">
-        <h3>Pandemic</h3>
-        <p>Thrillers exploring the global spread of contagious pathogens, including zombie 
-           virus outbreaks.</p>
-        <a href="PANDEMIC.html" class="btn">Explore Pandemic</a>
-      </div>
-
-      <div class="genre-card">
-        <h3>Action/Thriller</h3>
-        <p>Pulse-pounding spectacles featuring intense stunts, crime-fighting, and high-speed 
-           chases.</p>
-        <a href="ACTIONTHRILLER.html" class="btn">Explore Action/Thriller</a>
-      </div>
-
+    <div class="genre-card">
+      <img src="IMAGES/PANDEMICIMAGE.jpg" alt="Pandemic" class="genre-img">
+      <h3>Pandemic</h3>
+      <p>Thrilling stories exploring virus outbreaks, global chaos, and humanity’s fight 
+         for survival in extreme biological crises.</p>
+      <a href="PANDEMIC.html" class="btn">Explore Pandemic</a>
     </div>
 
-    <footer>
-      © 2026 • John Paul's Film Collection
-    </footer>
+    <div class="genre-card">
+      <img src="IMAGES/ACTIONTHRILLERIMAGE.jpg" alt="Action Thriller" class="genre-img">
+      <h3>Action / Thriller</h3>
+      <p>Adrenaline-pumping movies packed with explosive scenes, tactical missions, 
+         and intense high-speed chases.</p>
+      <a href="ACTIONTHRILLER.html" class="btn">Explore Action/Thriller</a>
+    </div>
 
   </div>
-</body>
 
+  <footer>
+    © 2026 • John Paul’s Film Collection
+  </footer>
+
+</div>
+
+</body>
 </html>

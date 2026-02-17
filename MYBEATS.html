@@ -1,238 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>My Beats - John Paul's Music Collection</title>
+<meta charset="UTF-8">
+<title>My Beats - John Paul's Music Collection</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
-      font-family: Tahoma, Verdana, sans-serif;
-      color: #3F3B33;
-    }
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+  font-family: Tahoma, Verdana, sans-serif;
+  color: #3F3B33;
+}
 
-    .container {
-      max-width: 1450px;
-      margin: auto;
-      padding: 20px;
-    }
+/* FULL WIDTH CONTAINER */
+.container {
+  width: 95%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 40px 0;
+}
 
-    /* Hero Section */
-    .hero {
-      background-color: #FFFDF6;
-      padding: 40px 50px;
-      margin-bottom: 30px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-      position: relative;
-      text-align: center;
-    }
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #FFFDF6, #F5EBD9);
+  padding: 70px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  text-align: center;
+}
 
-    /* Hero navigation bar */
-    .hero-nav {
-      display: inline-flex;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      align-items: center;
-      background: #FFFDF6;
-      padding: 8px 12px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #E8DCC8;
-    }
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
 
-    .hero-nav a {
-      text-decoration: none;
-      color: #5A4E3C;
-      background: transparent;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: background-color 0.18s ease, transform 0.12s ease, color 0.18s ease;
-      display: inline-block;
-    }
+.hero-nav a {
+  text-decoration: none;
+  color: #5A4E3C;
+  font-weight: bold;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: #F0E8D8;
+  transition: 0.3s ease;
+}
 
-    .hero-nav a:hover {
-      background-color: #F0E8D8;
-      color: #3F3B33;
-      transform: translateY(-2px);
-    }
+.hero-nav a:hover {
+  background: #5A4E3C;
+  color: white;
+  transform: scale(1.05);
+}
 
-    h1 {
-      color: #5A4E3C;
-      margin: 0;
-      letter-spacing: 1px;
-      font-size: 32px;
-      font-weight: 700;
-    }
+h1 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: 2px;
+}
 
-    .subtitle {
-      color: #6B5E48;
-      margin-top: 8px;
-      font-size: 18px;
-      font-weight: 500;
-    }
+.subtitle {
+  margin-top: 12px;
+  font-size: 20px;
+  color: #6B5E48;
+}
 
-    h2 {
-      margin-top: 0;
-      color: #5A4E3C;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 24px;
-    }
+/* FEATURED SECTION */
+.featured {
+  margin: 50px 0;
+  padding: 50px;
+  border-radius: 20px;
+  background: #FFFDF6;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
 
-    /* Music Genre Grid */
-    .genre-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
+.featured h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
 
-    .genre-card {
-      background-color: #FFFDF6;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
+.featured p {
+  font-size: 16px;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.8;
+}
 
-    .genre-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+/* GRID */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
 
-    .genre-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
+.genre-card {
+  background: #FFFDF6;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 460px;
+}
 
-    .genre-card h3 {
-      color: #5A4E3C;
-      font-size: 22px;
-      margin: 15px 0;
-      letter-spacing: 0.5px;
-    }
+.genre-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
 
-    .genre-card p {
-      color: #6B5E48;
-      font-size: 15px;
-      line-height: 1.7;
-      margin: 15px 0;
-    }
+/* IMAGE STYLE (NO CROPPING) */
+.genre-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;      /* IMPORTANT: prevents cutting */
+  background-color: #F0E8D8; /* clean background behind image */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: #5A4E3C;
-      color: #FFFDF6;
-      text-decoration: none;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      transition: background-color 0.3s ease;
-      font-family: Tahoma, Verdana, sans-serif;
-      margin-top: 10px;
-    }
+.genre-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
 
-    .btn:hover {
-      background-color: #6B5E48;
-    }
+.genre-card p {
+  font-size: 16px;
+  line-height: 1.8;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px 60px;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #7A6F5A;
-      background-color: #FFFDF6;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    }
+.btn {
+  margin-top: 20px;
+  padding: 14px 35px;
+  background: #5A4E3C;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
 
-    @media (max-width: 768px) {
-      .genre-grid {
-        grid-template-columns: 1fr;
-      }
+.btn:hover {
+  background: #3F3B33;
+  transform: scale(1.05);
+}
 
-      .hero {
-        padding: 20px;
-      }
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 40px;
+  text-align: center;
+  background: #5A4E3C;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+}
 
-      h1 {
-        font-size: 24px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-      }
-
-      footer {
-        padding: 30px 20px;
-      }
-    }
-  </style>
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 { font-size: 28px; }
+  .featured { padding: 30px; }
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <!-- Hero Section -->
-    <div class="hero">
-      <nav class="hero-nav" aria-label="Primary">
-        <a href="index.html">← Back to Home</a>
-      </nav>
-      <h1>🎵 My Beats</h1>
-      <div class="subtitle">Explore My Music Taste Collection Categorized by Genre</div>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-nav">
+      <a href="index.html">← Back to Home</a>
+    </div>
+    <h1>My Beats</h1>
+    <div class="subtitle">Explore My Personal Music Taste Collection by Genre</div>
+  </div>
+
+  <!-- FEATURED -->
+  <div class="featured">
+    <h2>Why Music Matters To Me</h2>
+    <p>
+      Music shapes my mood, fuels my focus, and connects me to memories and emotions.
+      From mellow soft rock to powerful post-grunge anthems, each genre reflects
+      a different part of my personality. This collection represents the soundtracks
+      that define my everyday life.
+    </p>
+  </div>
+
+  <!-- GENRES -->
+  <div class="genre-grid">
+
+    <div class="genre-card">
+      <img src="IMAGES/COLDPLAYCOVER.jpg" alt="Soft Rock" class="genre-img">
+      <h3>Soft Rock</h3>
+      <p>Mellow and melodic rock music combining smooth vocals with gentle instrumentation.
+         Perfect for relaxing and late-night listening.</p>
+      <a href="SOFTROCK.html" class="btn">Explore Soft Rock</a>
     </div>
 
-    <!-- Music Genre Overview -->
-    <div class="genre-grid">
-
-      <!-- Soft Rock -->
-      <div class="genre-card">
-        <h3>Soft Rock</h3>
-        <p>Mellow and melodic rock music that combines smooth vocals with gentle instrumentation. Perfect for relaxing and unwinding.</p>
-        <a href="SOFTROCK.html" class="btn">Explore Soft Rock</a>
-      </div>
-
-      <!-- OPM Alternative Rock -->
-      <div class="genre-card">
-        <h3>OPM Alternative Rock</h3>
-        <p>Original Pilipino Music with an alternative rock edge. Featuring local bands that blend Filipino culture with modern rock sounds.</p>
-        <a href="OPMALTROCK.html" class="btn">Explore OPM Alt Rock</a>
-      </div>
-
-      <!-- Post-Grunge -->
-      <div class="genre-card">
-        <h3>Post-Grunge</h3>
-        <p>A more radio-friendly evolution of grunge, featuring powerful vocals and heavy guitar riffs with accessible melodies. Emerging in the mid-1990s.</p>
-        <a href="POSTGRUNGE.html" class="btn">Explore Post-Grunge</a>
-      </div>
-
-      <!-- Pop Hits -->
-      <div class="genre-card">
-        <h3>Pop Hits</h3>
-        <p>Catchy and upbeat tracks that dominate the charts. From contemporary pop to timeless classics that everyone loves. Designed to appeal to a wide audience.</p>
-        <a href="POPHITS.html" class="btn">Explore Pop Hits</a>
-      </div>
-
+    <div class="genre-card">
+      <img src="IMAGES/OPM-SYNESTHESIA1.jpg" alt="OPM Alternative Rock" class="genre-img">
+      <h3>OPM Alternative Rock</h3>
+      <p>Original Pilipino Music blended with alternative rock vibes.
+         Featuring powerful local bands and culturally inspired sound.</p>
+      <a href="OPMALTROCK.html" class="btn">Explore OPM Alt Rock</a>
     </div>
 
-    <footer>
-      © 2026 • John Paul's Music Collection
-    </footer>
+    <div class="genre-card">
+      <img src="IMAGES/DAUGHTRYCOVER.jpg" alt="Post-Grunge" class="genre-img">
+      <h3>Post-Grunge</h3>
+      <p>A modern evolution of grunge with strong vocals, heavy riffs,
+         and emotionally charged lyrics emerging in the mid-90s.</p>
+      <a href="POSTGRUNGE.html" class="btn">Explore Post-Grunge</a>
+    </div>
+
+    <div class="genre-card">
+      <img src="IMAGES/PARAMORECOVER.jpg" alt="Pop Hits" class="genre-img">
+      <h3>Pop Hits</h3>
+      <p>Catchy, energetic, and chart-topping songs from different eras —
+         from timeless classics to today's biggest hits.</p>
+      <a href="POPHITS.html" class="btn">Explore Pop Hits</a>
+    </div>
 
   </div>
-</body>
 
+  <footer>
+    © 2026 • John Paul’s Music Collection
+  </footer>
+
+</div>
+
+</body>
 </html>
