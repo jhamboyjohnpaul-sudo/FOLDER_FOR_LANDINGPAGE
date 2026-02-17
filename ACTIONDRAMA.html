@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Drama Collection - John Paul's Films</title>
+    <style>
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary-bg: #EFE7D3;
+            --secondary-bg: #F7F2E7;
+            --card-bg: #FFFDF6;
+            --accent-color: #5A4E3C;
+            --text-main: #3F3B33;
+            --text-muted: #6B5E48;
+            --shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* ===== RESET & BASE ===== */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+            font-family: 'Tahoma', Verdana, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* ===== HEADER SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #FFFDF6, #F5EBD9);
+            padding: 50px 20px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: #F0E8D8;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .back-btn:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ===== MOVIE CARDS ===== */
+        .movie-card {
+            display: grid;
+            grid-template-columns: 320px 1fr 500px;
+            gap: 30px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+
+        .poster-container {
+            height: 480px;
+            width: 320px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .poster-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .movie-content {
+            padding: 10px;
+        }
+
+        .movie-content h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--primary-bg);
+            padding-bottom: 10px;
+        }
+
+        .synopsis {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin: 20px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .meta-grid p {
+            margin: 5px 0;
+        }
+
+        .meta-grid b {
+            color: var(--accent-color);
+        }
+
+        .video-box {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .copyright-note {
+            font-size: 0.85rem;
+            margin-top: 15px;
+            opacity: 0.9;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 15px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1250px) {
+            .movie-card {
+                grid-template-columns: 320px 1fr;
+            }
+            
+            .video-box {
+                grid-column: span 2;
+                max-width: 800px;
+                margin: 20px auto 0 auto;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .movie-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .poster-container {
+                margin: 0 auto;
+            }
+            
+            .video-box {
+                grid-column: span 1;
+            }
+            
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER SECTION -->
+        <header class="hero">
+            <a href="TV SHOWS.html" class="back-btn">← Back to TV Shows</a>
+            <a href="index.html" class="back-btn">Home</a>
+            <h1>Action Drama</h1>
+            <p>Street-level justice and intense missions.</p>
+        </header>
+
+        <!-- MOVIE 1: FPJ'S BATANG QUIAPO -->
+        <article class="movie-card">
+            <div class="poster-container">
+                <img src="IMAGES/COVERBATANGQUIAPO.jpg" alt="Batang Quiapo">
+            </div>
+            
+            <div class="movie-content">
+                <h2>FPJ's BATANG QUIAPO</h2>
+                <p class="synopsis">
+                    Tanggol rises from the streets of Quiapo as he attempts to navigate the world of crime while protecting his family.
+                </p>
+                <div class="meta-grid">
+                    <p><b>Directors:</b> Coco Martin, et al.</p>
+                    <p><b>Released:</b> 2023</p>
+                    <p><b>Casts:</b> Coco Martin, Lovi Poe, Charo Santos</p>
+                </div>
+            </div>
+            
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/UWrLQ55Jyao" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- MOVIE 2: FPJ'S ANG PROBINSYANO -->
+        <article class="movie-card">
+            <div class="poster-container">
+                <img src="IMAGES/ANGPROBINSYANO.jpg" alt="Ang Probinsyano">
+            </div>
+            
+            <div class="movie-content">
+                <h2>FPJ's ANG PROBINSYANO</h2>
+                <p class="synopsis">
+                    A dedicated policeman goes undercover to avenge his twin brother and fight corruption.
+                </p>
+                <div class="meta-grid">
+                    <p><b>Directors:</b> Coco Martin, et al.</p>
+                    <p><b>Released:</b> 2015</p>
+                    <p><b>Casts:</b> Coco Martin, Susan Roces, Julia Montes</p>
+                </div>
+            </div>
+            
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/KKDs3OE4fxU" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- MOVIE 3: MGA BATANG RILES -->
+        <article class="movie-card">
+            <div class="poster-container">
+                <img src="IMAGES/MGABATANGRILES.jpg" alt="Batang Riles">
+            </div>
+            
+            <div class="movie-content">
+                <h2>MGA BATANG RILES</h2>
+                <p class="synopsis">
+                    The gritty lives of youth living along the railroad tracks, facing the harsh realities of survival.
+                </p>
+                <div class="meta-grid">
+                    <p><b>Directors:</b> Laurice Guillen, et al.</p>
+                    <p><b>Released:</b> 2025</p>
+                    <p><b>Casts:</b> Miguel TanFelix, Kokoy De Santos</p>
+                </div>
+            </div>
+            
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0KmVB4fLOi4" allowfullscreen></iframe>
+                </div>
+            </div>
+        </article>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            © 2026 • John Paul's Film Collection
+            <div class="copyright-note">
+                No copyright infringement intended. All movie clips, trailers, and media belong to their respective owners. 
+                This is a personal collection for educational and entertainment purposes only.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
