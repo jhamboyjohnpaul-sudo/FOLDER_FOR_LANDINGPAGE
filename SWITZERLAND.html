@@ -4,32 +4,140 @@
     <meta charset="UTF-8">
     <title>Switzerland</title>
     <style>
-        body { margin: 0; text-align: center; background: #F7F2E7; font-family: Tahoma, sans-serif; color: #3F3B33; }
-        .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px; }
-        .nav { margin-bottom: 20px; }
-        .nav a { text-decoration: none; color: #5A4E3C; font-weight: bold; background: #EFE7D3; padding: 10px 20px; border-radius: 8px; }
-        .main-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; }
-        .content { background: white; padding: 40px; border-radius: 20px; margin-top: -50px; position: relative; width: 80%; margin-left: auto; margin-right: auto; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
-        .sub-img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; }
-        h1 { color: #5A4E3C; }
+        body { 
+            margin: 0; 
+            padding: 0;
+            background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+            font-family: Tahoma, Verdana, sans-serif; 
+            color: #3F3B33; 
+            text-align: center;
+        }
+
+        .container { 
+            width: 95%; 
+            max-width: 1100px; 
+            margin: auto; 
+            padding: 40px 0; 
+        }
+
+        .nav { 
+            margin-bottom: 30px; 
+        }
+
+        .nav a { 
+            text-decoration: none; 
+            color: #5A4E3C; 
+            font-weight: bold; 
+            background: #F0E8D8; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav a:hover { 
+            background: #5A4E3C; 
+            color: white; 
+            transform: scale(1.05); 
+        }
+
+        .main-img { 
+            width: 100%; 
+            height: 500px; 
+            object-fit: cover; 
+            border-radius: 20px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); 
+        }
+
+        .content { 
+            background: #FFFDF6; 
+            padding: 50px; 
+            border-radius: 20px; 
+            margin: -60px auto 0; 
+            position: relative; 
+            width: 85%; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 { 
+            color: #3F3B33; 
+            font-size: 36px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            color: #5A4E3C;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        p { 
+            line-height: 1.9; 
+            font-size: 17px;
+            color: #4A453C;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 25px; 
+            margin: 35px 0; 
+        }
+
+        .sub-img { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 15px; 
+            transition: 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .sub-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .content { width: 90%; padding: 30px; }
+            .grid { grid-template-columns: 1fr; }
+            .main-img { height: 350px; }
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="nav"><a href="DREAMPLACES.html">← Back to Collage</a></div>
-        <img src="IMAGES/SWITZERLAND.jpg" class="main-img">
+        <div class="nav">
+            <a href="DREAMPLACES.html">← Back to Collage</a>
+        </div>
+
+        <img src="IMAGES/SWITZERLAND.jpg" alt="Switzerland Alpine Landscape" class="main-img">
+
         <div class="content">
             <h1>Switzerland</h1>
+            
             <h3>Why I'd want to visit:</h3>
-            <p>To immerse myself in picture perfect alpine landscapes. It's a destination that offers both thrilling adventure and serene relaxation, from its charming villages to its breathtaking mountain scenery.</p>
+            <p>
+                To immerse myself in picture-perfect alpine landscapes. It's a destination that 
+                offers both thrilling adventure and serene relaxation, from its charming villages 
+                to its breathtaking <strong>mountain scenery.</strong>
+            </p>
             
             <div class="grid">
-                <img src="IMAGES/SWITZERLANDADD1.jpg" class="sub-img">
-                <img src="IMAGES/SWITZERLANDADD2.jpg" class="sub-img">
+                <img src="IMAGES/SWITZERLANDADD1.jpg" alt="Swiss Mountain Village" class="sub-img">
+                <img src="IMAGES/SWITZERLANDADD2.jpg" alt="Swiss Alpine Train" class="sub-img">
             </div>
-            <p>I'm eager to Hike through wildflower-dotted trails, skiing with the Matterhorn as a backdrop, riding the train to see the scenic mountain landscapes unfold right outside the window, and indulging in world-famous cheese and chocolate.</p>
+
+            <p>
+                I'm eager to hike through wildflower-dotted trails, ski with the Matterhorn as 
+                a backdrop, ride the scenic mountain trains that unfold spectacular views right 
+                outside the window, and indulge in world-famous cheese and chocolate.
+            </p>
         </div>
     </div>
+
 </body>
 </html>
