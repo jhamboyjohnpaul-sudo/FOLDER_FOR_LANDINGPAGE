@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base target="newSpace"/>
+    <meta charset="UTF-8">
+    <title>Dream Places - My Travel Destinations</title>
+    <script language="JavaScript">
+            function writeText(txt) {
+                document.getElementById("desc").innerHTML = txt;
+                document.getElementById("desc").style.display = "block";
+            }
+
+            function dissolveText(txt) {
+                document.getElementById("desc").innerHTML = txt;
+                document.getElementById("desc").style.display = "none";
+            }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+            font-family: Tahoma, Verdana, sans-serif;
+            color: #3F3B33;
+            text-align: center;
+        }
+        .container {
+            width: 95%;
+            max-width: 1800px; /* Kept large as requested */
+            margin: auto;
+            padding: 40px 0;
+            position: relative;
+        }
+        .hero {
+            background: linear-gradient(135deg, #FFFDF6, #F5EBD9);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            margin-bottom: 30px;
+        }
+        .hero-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .hero-nav a {
+            text-decoration: none;
+            color: #5A4E3C;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #F0E8D8;
+            transition: 0.3s;
+        }
+        .hero-nav a:hover {
+            background: #5A4E3C;
+            color: white;
+            transform: scale(1.05);
+        }
+        h1 {
+            font-size: 42px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;  
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #6B5E48;
+            margin-bottom: 20px;
+        }
+
+        /* COLLAGE AREA - CENTERED & LARGE */
+        .collage-container {
+            width: 100%;
+            max-width: 1800px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            display: block; /* Allows margin auto to work */
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        img {
+            border-radius: 10px;
+            max-width: 100%; /* Can expand up to 1800px */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Centers the image inside the white container */
+        }
+
+        /* HOVER TEXT BOX */
+        p#desc {
+            font-family: Tahoma;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+            background: rgba(90, 78, 60, 0.8);
+            padding: 15px 25px;
+            border-radius: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            display: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            background: #5A4E3C;
+            color: white;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="hero">
+        <div class="hero-nav">
+            <a href="index.html">← Back to Home</a>
+        </div>
+        <h1>My Dream Destinations</h1>
+        <div class="subtitle">Click an Image to explore my future adventures...</div>
+    </div>
+
+    <div class="collage-container">
+        <img src="IMAGES/COLLAGE.jpg" alt="Travel Collage" usemap="#placemap">
+        
+        <map name="placemap">
+            <area shape="s" coords="71,78,472,450" href="MTPULAG.html"
+            onMouseOver="writeText('Mt. Pulag: A Sea of Clouds Above the World');" onMouseOut="dissolveText('')"/>
+
+            <area shape="circle" coords="814,274,195" href="ICELAND.html"
+            onMouseOver="writeText('Iceland: Chasing the Aurora Borealis');" onMouseOut="dissolveText('')"/>
+
+            <area shape="poly" coords="288,939,75,1061,76,1158,280,1270,470,1166,471,1061," href="MALDIVES.html"
+            onMouseOver="writeText('Maldives: A sanctuary for vibrant and peaceful life.');" onMouseOut="dissolveText('')"/>
+
+            <area shape="poly" coords="735,944,,901,943,1000,1051,1000,1161,893,1267,728,1269,625,1155,625,1052" href="SWITZERLAND.html"
+            onMouseOver="writeText('Switzerland: The Blazing Mountain of the Gods.');" onMouseOut="dissolveText('')"/>
+
+            <area shape="poly" coords="389,513,705,513,774,884,331,882," href="PARIS.html"
+            onMouseOver="writeText('Paris: The most romantic place in the world.');" onMouseOut="dissolveText('')"/>
+        </map>
+        
+        <p id="desc"></p>
+    </div>
+
+    <footer>
+        © 2026 • My Travel Wanderlust
+    </footer>
+</div>
+
+</body>
+</html>
