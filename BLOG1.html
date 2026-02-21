@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,27 +64,6 @@
             margin: 60px 0;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #5A4E3C;
-            color: #FFFDF6;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #6B5E48;
-        }
-
-        .back-wrapper {
-            text-align: center;
-            margin-top: 40px;
-        }
-
         .img-container {
             width: 200px;
             aspect-ratio: 1 / 1;
@@ -108,33 +86,65 @@
         .section-text {
             flex: 1;
         }
-        .blog-navigation {
+        
+        .bottom-navigation {
             display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
+            justify-content: center;
+            gap: 0;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .blog-navigation a {
-            padding: 12px 25px;
-            background-color: #5A4E3C;
-            color: #FFFDF6;
+        .bottom-navigation a {
+            padding: 14px 30px;
+            background: #5A4E3C;
+            color: white;
             text-decoration: none;
-            border-radius: 8px;
             font-weight: bold;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            transition: 0.3s;
+            display: inline-block;
+            border: 1px solid #4A3E2E;
+            flex: 1;
+            text-align: center;
         }
 
-        .blog-navigation a:hover {
-            background-color: #6B5E48;
+        .bottom-navigation a:first-child {
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid #6B5E48;
         }
 
+        .bottom-navigation a:nth-child(2) {
+            border-left: 1px solid #6B5E48;
+            border-right: 1px solid #6B5E48;
+        }
+
+        .bottom-navigation a:last-child {
+            border-radius: 0 10px 10px 0;
+            border-left: 1px solid #6B5E48;
+        }
+
+        .bottom-navigation a:hover {
+            background: #3F3B33;
+            transform: scale(1.02);
+            z-index: 1;
+            position: relative;
+        }
 
         footer {
             text-align: center;
             margin-top: 25px;
             font-size: 14px;
             color: #7A6F5A;
+            padding-top: 30px;
+            border-top: 1px solid #E5DBCB;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 20px;
         }
 
         @media (max-width: 768px) {
@@ -145,17 +155,27 @@
             .img-container {
                 width: 100%;
             }
-        
+            
+            .bottom-navigation {
+                flex-direction: row;
+                gap: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .bottom-navigation a {
+                padding: 14px 10px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
         <h1>A Typical Life of an IT Student</h1>
 
-        <!-- Section 1 -->
         <div class="section">
             <div class="img-container">
                 <img src="IMAGES/BLOG1IMAGE1.jpeg" alt="Blog image 1" class="bio-img">
@@ -175,7 +195,6 @@
 
         <div class="divider"></div>
 
-        <!-- Section 2 -->
         <div class="section">
             <div class="img-container">
                 <img src="IMAGES/BLOG1IMAGE2.jpeg" alt="Blog image 2" class="bio-img">
@@ -200,7 +219,6 @@
             </div>
         </div>
 
-        <!-- Section 3 -->
         <div class="section">
             <div class="img-container">
                 <img src="IMAGES/BLOG1IMAGE3.jpeg" alt="Blog image 3" class="bio-img">
@@ -221,7 +239,6 @@
 
         <div class="divider"></div>
 
-        <!-- Section 4 -->
         <div class="section">
             <div class="img-container">
                 <img src="IMAGES/BLOG1IMAGE4.jpeg" alt="Blog image 4" class="bio-img">
@@ -243,12 +260,9 @@
 
     </div>
 
-    <div class="back-wrapper">
-        <a href="index.html" class="btn">← Back to Home</a>
-    </div>
-
-    <div class="blog-navigation">
+    <div class="bottom-navigation">
         <a href="index.html">← Back</a>
+        <a href="index.html">← Back to Home</a>
         <a href="BLOG2.html">Next →</a>
     </div>  
     
@@ -257,5 +271,4 @@
     </footer>
 
 </body>
-
 </html>
