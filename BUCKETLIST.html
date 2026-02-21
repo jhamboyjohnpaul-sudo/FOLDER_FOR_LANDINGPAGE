@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bucket List - John Paul's Collection</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #EFE7D3, #F7F2E7);
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #3F3B33;
+  }
+
+  .container {
+    width: 95%;
+    max-width: 1600px;
+    margin: auto;
+    padding: 40px 0;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    background: linear-gradient(135deg, #FFFDF6, #F5EBD9);
+    padding: 70px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .hero-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+
+  .hero-nav a {
+    text-decoration: none;
+    color: #5A4E3C;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #F0E8D8;
+    transition: 0.3s;
+    border: 1px solid #E8DCC8;
+  }
+
+  .hero-nav a:hover {
+    background: #5A4E3C;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #5A4E3C;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #6B5E48;
+    font-style: italic;
+  }
+
+  /* INTRO SECTION */
+  .featured {
+    margin: 50px 0;
+    padding: 50px;
+    border-radius: 20px;
+    background: #FFFDF6;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid #F0E8D8;
+  }
+
+  .featured h2 {
+    margin-top: 0;
+    font-size: 26px;
+    color: #5A4E3C;
+  }
+
+  .featured p {
+    font-size: 17px;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+  }
+
+  /* GRID SYSTEM */
+  .bucket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+  }
+
+  .bucket-card {
+    background: #FFFDF6;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F0E8D8;
+  }
+
+  .bucket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  }
+
+  .bucket-img {
+    width: 100%;
+    height: 240px;         
+    object-fit: cover;      
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .bucket-card h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #5A4E3C;
+  }
+
+  .location-tag {
+    font-size: 14px;
+    color: #8E7F66;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .bucket-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6B5E48;
+    flex-grow: 1;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 40px;
+    text-align: center;
+    background: #5A4E3C;
+    color: #F7F2E7;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    .featured { padding: 30px; }
+    .bucket-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-nav">
+        <a href="index.html">← Back to Home</a>
+    </div>
+    <h1>My Lifetime Bucket List</h1>
+    <div class="subtitle">"A collection of fears to conquer, places to see, and moments to feel alive."</div>
+  </div>
+
+  <div class="featured">
+    <h2>The Journey of a Lifetime</h2>
+    <p>
+      Life is a series of chapters waiting to be written. This bucket list represents my 
+      personal milestones—experiences that challenge my boundaries and dreams that 
+      inspire me to keep moving forward.
+    </p>
+  </div>
+
+  <div class="bucket-grid">
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETSKYDIVE.jpg" alt="Sky Diving" class="bucket-img">
+      <h3>Do Sky Diving</h3>
+      <p class="location-tag">Location: Dubai, UAE</p>
+      <p>Sky diving in Dubai is a world-renowned experience, offering a breathtaking view of the Palm Jumeirah. I want to do this to finally conquer my fear of heights and experience the ultimate feeling of freedom.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETMTAPO.jpg" alt="Mt. Apo Hiking" class="bucket-img">
+      <h3>Do Mt. Apo Hiking</h3>
+      <p class="location-tag">Location: Davao City, Davao Del Sur</p>
+      <p>Mt. Apo is the highest peak in the Philippines, a challenging yet rewarding trek through volcanic trails. I want to hike it to test my physical endurance and stand on the highest point of my home country.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETGREATWALL.jpg" alt="Great Wall of China" class="bucket-img">
+      <h3>Walk the Great Wall</h3>
+      <p class="location-tag">Location: China</p>
+      <p>The Great Wall of China is an ancient series of walls and fortifications that stretches thousands of miles across northern China. I want to walk through it to witness this architectural marvel and feel the weight of centuries of history beneath my feet.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETHOTAIR.jpg" alt="Hot Air Balloon" class="bucket-img">
+      <h3>Ride Hot Air Balloon</h3>
+      <p class="location-tag">Location: Cappadocia, Turkey</p>
+      <p>Cappadocia is famous for its "fairy chimney" rock formations and its sky filled with hundreds of balloons at sunrise. I want to ride one to peacefully drift over the unique landscape and experience a quiet, golden morning from above.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETBLOSSOMS.jpg" alt="Cherry Blossoms" class="bucket-img">
+      <h3>Glimpse the Cherry Blossoms</h3>
+      <p class="location-tag">Location: Japan</p>
+      <p>The "Sakura" or cherry blossom season in Japan is a beautiful time when the country turns shades of pink and white. I want to witness it because it represents a time of renewal and is one of the most serene natural displays on Earth.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETCOLDPLAY.jpg" alt="Coldplay" class="bucket-img">
+      <h3>Attend Coldplay Concert</h3>
+      <p class="location-tag">Location: Philippine Arena</p>
+      <p>Coldplay's concerts are known for their vibrant energy and emotional connection. I want to attend to experience the magic of their music live and be part of a crowd united by pure joy.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETGRANDCANYON.jpg" alt="Grand Canyon" class="bucket-img">
+      <h3>See Grand Canyon</h3>
+      <p class="location-tag">Location: Northern Arizona, USA</p>
+      <p>The Grand Canyon is a masterpiece of nature, showing the power of time and geology. I want to see it to witness its immense scale in person and be reminded of how vast our world truly is.</p>
+    </div>
+
+    <div class="bucket-card">
+      <img src="IMAGES/BUCKETHIGHWAY10.jpg" alt="Highway 10" class="bucket-img">
+      <h3>Drive at Highway 10</h3>
+      <p class="location-tag">Location: Saudi Arabia</p>
+      <p>Highway 10 is famous for being the longest straight road in the world. I want to drive on it to experience the unique, meditative solitude of the desert and the thrill of an endless horizon.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 • John Paul’s Bucket List Journey
+  </footer>
+
+</div>
+
+</body>
+</html>
